@@ -427,6 +427,26 @@ select:focus {
     outline: none;
 }
 
+.badge-grid {
+  display: grid;
+  /* Define exactly 9 equal columns */
+  grid-template-columns: repeat(9, 1fr); 
+  /* Space between images */
+  gap: 12px; 
+  /* Vertical and horizontal centering within the row */
+  align-items: center;
+  justify-items: center;
+  /* Ensures the row never wraps to a second line */
+  grid-auto-flow: column; 
+}
+
+.badge-grid img {
+  /* Set a maximum width for professional display */
+  width: 100%;
+  /*max-width: 64px; */
+  height: 100%;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     :root {
@@ -470,6 +490,16 @@ select:focus {
     main {
         padding: 0 var(--spacing-xs);
     }
+
+    .badge-grid {
+    /* Allow the row to scroll horizontally if it overflows */
+    overflow-x: auto;
+    /* Optional: hides scrollbar for a cleaner look */
+    scrollbar-width: none; 
+    /* Prevents the grid from forcing items to tiny widths */
+    grid-template-columns: repeat(9, minmax(50px, 1fr));
+    padding-bottom: 10px;
+  }
 }
 
 @media (max-width: 480px) {
