@@ -429,22 +429,113 @@ select:focus {
 
 .badge-grid {
   display: grid;
-  /* Define exactly 9 equal columns */
-  grid-template-columns: repeat(9, 1fr); 
-  /* Space between images */
-  gap: 12px; 
-  /* Vertical and horizontal centering within the row */
-  align-items: center;
-  justify-items: center;
-  /* Ensures the row never wraps to a second line */
-  grid-auto-flow: column; 
+
+  /* Exactly 9 equal columns */
+  grid-template-columns: repeat(9, 1fr);
+
+  gap: 16px;
+
+  align-items: stretch;     /* Equal-height grid cells */
+  justify-items: center;    /* Center cards horizontally */
+
+  grid-auto-rows: 1fr;      /* Uniform row height */
 }
 
-.badge-grid img {
-  /* Set a maximum width for professional display */
+#devforge-logo{
+    width: 207px;
+    height: auto;
+}
+
+.heading-link {
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.heading-link:hover,
+.heading-link:focus {
+  color: var(--primary-accent);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.badge-button {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  padding: 18px;
+  border-radius: 16px;
+
+  background: #0f1117;              /* Solid dark surface */
+  border: 1px solid rgba(255,255,255,0.08);
+
+  text-decoration: none;
+  color: #e6e8ee;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.45),
+    inset 0 0 0 rgba(0, 95, 204, 0);
+
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease,
+    border-color 0.15s ease;
+
   width: 100%;
-  /*max-width: 64px; */
-  height: 100%;
+  max-width: 140px;     /* controls grid footprint */
+  height: 180px;        /* ensures even grid rows */
+
+  justify-content: space-between; /* image top, CTA bottom */
+}
+
+.badge-button img {
+  width: 120px;
+  height: auto;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.6));
+}
+
+/* Hover = subtle lift + glow (no background change) */
+.badge-button:hover {
+  transform: translateY(-3px);
+  border-color: rgba(0, 140, 255, 0.6);
+  box-shadow:
+    0 14px 40px rgba(0, 0, 0, 0.65),
+    0 0 0 1px rgba(0, 140, 255, 0.4),
+    0 0 24px rgba(0, 140, 255, 0.25);
+}
+
+/* Active = press */
+.badge-button:active {
+  transform: translateY(1px);
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.55),
+    0 0 12px rgba(0, 140, 255, 0.3);
+}
+
+/* Keyboard accessibility */
+.badge-button:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px rgba(0, 140, 255, 0.8),
+    0 0 24px rgba(0, 140, 255, 0.4);
+}
+
+.badge-action {
+  font-size: 0.68rem;        /* smaller, more futuristic */
+  font-weight: 600;
+  letter-spacing: 0.14em;
+
+  line-height: 1;
+  max-width: 100%;
+
+  white-space: nowrap;       /* prevent wrapping */
+  overflow: hidden;          /* prevent overflow */
+  text-overflow: ellipsis;   /* clean cutoff if needed */
+
+  opacity: 0.75;
 }
 
 /* Responsive Design */
