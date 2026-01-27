@@ -93,7 +93,7 @@ body::before {
     opacity: 0.5;
 }
 
-#header-main h1 {
+h1 {
     font-size: var(--font-size-xxl);
     margin: var(--spacing-md) 0;
     background: var(--gradient-glow);
@@ -460,8 +460,23 @@ select:focus {
   text-underline-offset: 4px;
 }
 
+/* Container management */
+.certificates-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem; /* Spacing between each certificate row */
+}
+
+.certificate-entry {
+  display: flow-root; /* Modern clearfix: ensures article contains the floated badge */
+  width: 100%;
+}
+
 .badge-button {
-  display: inline-flex;
+  float: left;
+  margin: 0 30px 15px 0;
+
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
@@ -536,6 +551,56 @@ select:focus {
   text-overflow: ellipsis;   /* clean cutoff if needed */
 
   opacity: 0.75;
+}
+
+/* Logo Container Alignment */
+/* Stack profile picture above name */
+.logo-area {
+    display: flex;
+    flex-direction: column; /* Key: Changes layout from side-by-side to stacked */
+    align-items: center;    /* Centers both elements horizontally */
+    justify-content: center;
+    gap: var(--spacing-sm);  /* Consistent gap between image and name */
+    text-align: center;
+    padding: var(--spacing-md) 0;
+}
+
+/* Adjusting the logo-span for its new vertical position */
+.logo-glitch {
+    display: block;
+    font-size: var(--font-size-xl); /* Slightly smaller than XXL to balance the stack */
+    font-weight: 700;
+    letter-spacing: 3px;
+    background: var(--gradient-glow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    
+    /* Neon glow consistent with your futuristic theme */
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+    text-transform: uppercase;
+    transition: var(--transition-standard);
+}
+
+/* Alternating Logic: Target every second article */
+.certificate-entry:nth-child(even) .badge-button {
+  float: right;
+  margin: 0 0 15px 30px; /* Move gap to the left */
+}
+
+/* Optional: Right-align text for the alternating rows */
+.certificate-entry:nth-child(even) .certificate-content {
+  text-align: right;
+}
+
+.course-title {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.course-text {
+  line-height: 1.7; /* Improves readability for wrapped text */
 }
 
 /* Responsive Design */
