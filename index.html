@@ -5,61 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Resume</title>    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+<!-- Header and Navigation -->
     <header id="header-main">
-        
-         <div class="logo-area">
-            <img src="images/brent-headshot.jpg" alt="Profile Picture" class="profile-pic">
-            <span class="logo-glitch" data-text="B.CRYSTAL">Brent R. Crystal</span>
+        <div class="nav-container">
+            <div class="logo-area">
+                <img class="profile-pic" src="images/brent-headshot.jpg" alt="Brent R. Crystal" >
+                <div class="logo-text">
+                    <span class="logo-glitch" data-text="B.CRYSTAL">Brent R. Crystal</span>
+                </div>
+            </div>
+      
+            <nav>            
+                <ul class="nav-links">
+                    <li><a href="#section-experience">Experience</a></li>
+                    <li><a href="#section-projects">Projects</a></li>
+                    <li><a href="#section-skills">Skills</a></li>
+                    <li><a href="#section-development">Education</a></li>
+                    <li><a href="#section-credentials" class="btn-cta">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-
-        <address class="header-contact">
-            <ul>
-                <li><a href="tel:+16035349395"><i class="fas fa-phone"></i> (603) 534-9395 </a></li>
-                <li><a href="mailto:brentrcrystal@gmail.com"><i class="fas fa-envelope"></i> brentrcrystal@gmail.com </a></li>
-                <li><a href="https://www.linkedin.com/in/brent-crystal-2gb3tg317" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn </a></li>
-                <li><a href="https://github.com/brentscripts" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub </a></li>
-            </ul>
-        </address>
     </header>
 
-    <hr>
-
-<!-- <section id="section-objective" class="resume-section">
-    <h2>Objective</h2>
-    <div>
-        <p>
-            Seeking a challenging role as a <strong>C# & .NET Software Developer</strong> to leverage my expertise in <strong>Epicor ERP</strong> customizations and <strong>Web API</strong> integrations. Eager to contribute to innovative projects that drive business efficiency and growth through robust software solutions.
-        </p>
-    </div>
-</section> -->
- 
 <main>
-    <section id="section-summary" class="resume-section">
-        <h1>C# & .NET Developer <span class="accent">specializing in Epicor ERP</span></h1>
-        <h2>Summary</h2>
-        <div>
-            <p> 
-                <i class="fas fa-laptop-code summary-icon"></i>
-                <strong>C# & .NET Software Developer</strong> with 6+ years of experience specializing in <strong>Epicor ERP</strong> customizations and <strong>Web API</strong> integrations.<br>
-                Experienced in implementing custom business logic and connecting enterprise systems via <strong>RESTful services</strong>.<br><br>
-
-                <i class="fas fa-database summary-icon"></i>
-                Strong foundation in <strong>SQL</strong> and relational databases, with proficiency in <strong>Power BI</strong> data reporting to create <strong>actionable business insights</strong> from multiple data sources.<br><br>
-
-                <i class="fas fa-rocket summary-icon"></i>
-                Currently expanding <strong>full-stack development</strong> skills with <strong>ASP.NET Core</strong>, building practical knowledge across the broader <strong>.NET</strong> platform.<br>
-                Driven by solving complex business challenges through <strong>maintainable code</strong> and <strong>practical data solutions</strong>.
-            </p>
+    <!-- Hero section -->
+    <section id="section-summary" class="hero-container">
+        <img src="images/hero.jpg" alt="A blurred picture of office with computer monitor displaying code." />
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <!-- Headline: Focuses on the "Why" -->
+                <h1 class="hero-title">
+                   I connect systems <span class="accent">to turn data into insight.</span>
+                </h1>
+                <div class="hero-bio">
+                    <p>
+                        <span class="hero-name">Brent</span> builds modular services and Epicor ERP integrations
+                        to turn systems and data into actionable business insight.
+                        Specializing in C#/.NET architecture, APIs, and SQL scripts.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <hr>
+     <!-- Professional Experience Section -->
 
-    <section id="section-experience" class="resume-section">
+    <!-- <section id="section-experience" class="resume-section">
         <h2>Professional Experience</h2>
         <div>
             <h3 class="job-title">Business Solutions Developer | Turbocam International | Mar 2022 – Present</h3>
@@ -78,6 +73,7 @@
                 
                 <li><strong>Team Documentation:</strong> Created a centralized documentation site and onboarding resources using MkDocs to streamline developer training.</li>
             </ul>
+
             <h3 class="job-title">Business Analyst | Turbocam International | Jan 2018 – Feb 2022</h3>
             <ul>
                 <li><strong>Spearheaded manufacturing capacity planning</strong> by developing custom Excel-based scheduling applications and workflows to optimize resource allocation.</li>
@@ -89,6 +85,14 @@
             <ul>
                 <li><strong>Directed a $4.5M operational value stream</strong>, managing a team of 9 and achieving year-over-year improvements in throughput and quality.</li>
                 <li><strong>Implemented Lean/Six Sigma frameworks</strong> to reduce operational waste and costs, supported by custom-built Excel monitoring tools for real-time inventory visibility.</li>
+            </ul>
+
+            <h3 class="job-title">Account Manager | Turbocam International | Dec 2006 – Dec 2013</h3>
+            <ul>
+                <li><strong>Managed customer service and sales</strong> for top OEM customers in the processed air, gas, and aerospace industries. </li>
+                <li><strong>Secured multimillion-dollar contracts</strong> to manufacture bladed rotating components using 5-axis and nonconventional machining methods.</li>
+                <li><strong>Ensured ISO quality compliance</strong> and conducted contract review and negotiation with engineering and machinists to confirm delivery dates.</li>
+                <li><strong>Leveraged Epicor ERP system</strong> to quote, track, and manage customer accounts and sales orders efficiently.</li>
             </ul>
         </div>
     </section>
@@ -122,8 +126,104 @@
                 <li><strong>Operational Excellence:</strong> Lean Manufacturing, Six Sigma Green Belt, Value Stream Mapping (VSM).</li>
             </ul>
         </div>
-    </section>
+    </section> -->
     
+    <section id="section-experience" class="resume-section">
+    <h2 class="section-title">Professional <span class="accent">Experience</span></h2>
+    
+    <div class="experience-ledger">
+        <!-- ROLE 1: Business Solutions Developer -->
+        <article class="exp-card">
+            <div class="exp-header">
+                <div class="title-group">
+                    <h3 class="job-title">Business Solutions Developer</h3>
+                    <span class="company">Turbocam International | Mar 2022 – Present</span>
+                </div>
+            </div>
+            <div class="exp-body">
+                <ul class="exp-bullets">
+                    <li><span class="highlight">Cost Optimization:</span> Replaced an underutilized $15,000/year SaaS database by developing a lightweight middleware solution using PowerShell, Web API, and JSON.</li>
+                    <li><span class="highlight">System Integration:</span> Engineered Web API integrations between custom software and Epicor Kinetic to automate serialized production kanban, scrap reporting (NCR/DMR), and inventory transfers.</li>
+                    <li><span class="highlight">Logistics Automation:</span> Developed a real-time shipping integration to manage customer packing slips and transmit PDFs directly to workstations via server-side logic.</li>
+                    <li><span class="highlight">Data Pipeline:</span> Refactored a C# data pipeline to synchronize ToolBoss inventory with Epicor, automating data entry and inventory management.</li>
+                    <li><span class="highlight">Platform Migration:</span> Migrated legacy Epicor customizations and dashboards to the Kinetic SaaS UI using Application Studio.</li>
+                    <li><span class="highlight">Workflow Efficiency:</span> Automated monthly labor data imports using PowerShell and Epicor DMT with automated file monitoring and error logging.</li> 
+                    <li><span class="highlight">Team Documentation:</span> Created a centralized documentation site and onboarding resources using MkDocs to streamline developer training.</li>
+                </ul>
+                <div class="tech-stack">
+                    <span class="tech-tag">C#</span> <span class="tech-tag">.NET Core</span> <span class="tech-tag">Epicor Kinetic</span> <span class="tech-tag">SQL</span> <span class="tech-tag">REST API</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- ROLE 2: Business Analyst -->
+<article class="exp-card">
+    <div class="exp-header">
+        <div class="title-group">
+            <h3 class="job-title">Business Analyst</h3>
+            <span class="company">Turbocam International | Jan 2018 – Feb 2022</span>
+        </div>
+    </div>
+    <div class="exp-body">
+        <ul class="exp-bullets">
+            <li><span class="highlight">Capacity Planning:</span> Spearheaded manufacturing scheduling by developing custom Excel-based applications and workflows to optimize resource allocation.</li>
+            <li><span class="highlight">ERP Strategy:</span> Translated complex business requirements into technical specifications for ERP enhancements, focusing on KPI tracking and reporting accuracy.</li>
+            <li><span class="highlight">System Deployment:</span> Facilitated cross-functional user training and UAT for major ERP module deployments.</li>
+            <li><span class="highlight">Data Visualization:</span> Built complex Epicor BAQs, dashboards, and custom SSRS reports to support data-driven decision-making.</li>
+            <li><span class="highlight">Process Automation:</span> Developed Epicor classic form customizations, updatable BAQs, and BPMs to streamline business processes.</li>
+        </ul>
+        <div class="tech-stack">
+            <span class="tech-tag">Epicor ERP</span> <span class="tech-tag">BAQ/BPM</span> <span class="tech-tag">SSRS</span> <span class="tech-tag">Excel</span> <span class="tech-tag">KPI Tracking</span>
+        </div>
+    </div>
+</article>
+
+<!-- ROLE 3: Value Stream Manager -->
+<article class="exp-card">
+    <div class="exp-header">
+        <div class="title-group">
+            <h3 class="job-title">Value Stream Manager</h3>
+            <span class="company">Turbocam International | Dec 2013 – Dec 2017</span>
+        </div>
+    </div>
+    <div class="exp-body">
+        <ul class="exp-bullets">
+            <li><span class="highlight">Operations Management:</span> Directed a $4.5M operational value stream, managing a team of 9 and multiple precision machining cells.</li>
+            <li><span class="highlight">Performance Growth:</span> Achieved year-over-year improvements in sales throughput and significantly reduced scrap rates.</li>
+            <li><span class="highlight">Continuous Improvement:</span> Implemented Operational Excellence and Lean/Six Sigma methodologies to eliminate operational waste.</li>
+            <li><span class="highlight">Decision Tooling:</span> Developed custom-built Excel tools for real-time capacity planning, scheduling, and resource allocation.</li>
+            <li><span class="highlight">Quality Leadership:</span> Completed a Lean Six Sigma Green Belt project to reduce scrap on complex turbine assemblies, lowering Cost of Poor Quality (COPQ).</li>
+            <li><span class="highlight">Supply Chain:</span> Collaborated with planners to manage raw material supply chains, inventory levels, and supplier relationships.</li>
+        </ul>
+        <div class="tech-stack">
+            <span class="tech-tag">Lean Six Sigma</span> <span class="tech-tag">Operational Excellence</span> <span class="tech-tag">VSM</span> <span class="tech-tag">Excel</span> <span class="tech-tag">Supply Chain</span>
+        </div>
+    </div>
+</article>
+
+<!-- ROLE 4: Account Manager -->
+<article class="exp-card">
+    <div class="exp-header">
+        <div class="title-group">
+            <h3 class="job-title">Account Manager</h3>
+            <span class="company">Turbocam International | Dec 2006 – Dec 2013</span>
+        </div>
+    </div>
+    <div class="exp-body">
+        <ul class="exp-bullets">
+            <li><span class="highlight">Strategic Sales:</span> Managed customer service and sales for top-tier OEM customers in the aerospace and gas industries.</li>
+            <li><span class="highlight">Contract Acquisition:</span> Secured multimillion-dollar contracts for complex 5-axis bladed components.</li>
+            <li><span class="highlight">ISO Compliance:</span> Ensured ISO quality compliance and conducted technical contract reviews to confirm feasibility and delivery dates.</li>
+            <li><span class="highlight">ERP Utilization:</span> Leveraged the Epicor ERP system to quote, track, and manage customer accounts and sales orders efficiently.</li>
+        </ul>
+        <div class="tech-stack">
+            <span class="tech-tag">Epicor CRM</span> <span class="tech-tag">Contract Review</span> <span class="tech-tag">ISO Quality</span> <span class="tech-tag">OEM Strategy</span>
+        </div>
+    </div>
+</article>
+
+    <hr>
+
     <section id="section-development" class="resume-section">
         <h2>Professional Development</h2>
          <a class="heading-link" href="https://www.iamtimcorey.com/">
@@ -260,6 +360,23 @@
 
     <section id="section-credentials" class="resume-section">
         <h2>Professional Credentials</h2>
+        <div class="credentials-list">
+            <ul>
+                <li><strong>Six Sigma Green Belt</strong> | NH Manufacturing Extension Partnership</li>
+                <li><strong>Advanced Value Stream Design</strong> | Institute for Operational Excellence</li>
+                
+                <li><strong>Effective Communications & Human Relations</strong> | Dale Carnegie Training</li>
+                
+                <li><strong>Expert Infantryman Badge (EIB)</strong> | U.S. Army</li>
+            </ul>
+        </div>
+    </section>
+
+    <hr>
+ 
+
+    <section id="section-contact" class="resume-section">
+        <h2>Contact Me</h2>
         <div class="credentials-list">
             <ul>
                 <li><strong>Six Sigma Green Belt</strong> | NH Manufacturing Extension Partnership</li>
