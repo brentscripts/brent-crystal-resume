@@ -218,11 +218,11 @@ section:hover {
 
 section h2 {
     font-size: var(--font-size-xl);
-    margin-bottom: var(--spacing-md);
     color: var(--primary-accent);
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 700;
+    text-align: left;
 }
 
 section h3 {
@@ -258,7 +258,7 @@ section h3:hover {
 
 #section-skills .skills-category-title:first-of-type {
     margin-top: 0;
-}
+} 
 
 /* Professional Experience Timeline Styling */
 #section-experience .job-title {
@@ -426,7 +426,7 @@ select {
     padding: var(--spacing-sm);
     font-family: var(--font-family-primary);
     transition: var(--transition-standard);
-}
+} 
 
 input[type="text"]:focus,
 input[type="email"]:focus,
@@ -437,21 +437,20 @@ select:focus {
     box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
     background: rgba(26, 39, 73, 0.8);
     outline: none;
-}
+} 
 
-.badge-grid {
-  display: grid;
+  .badge-grid {
+  display: grid; 
 
-  /* Exactly 9 equal columns */
-  grid-template-columns: repeat(9, 1fr);
+  grid-template-columns: repeat(9, 1fr); 
 
-  gap: 16px;
+  gap: 16px; 
 
-  align-items: stretch;     /* Equal-height grid cells */
-  justify-items: center;    /* Center cards horizontally */
+  align-items: stretch;    
+  justify-items: center;     
 
-  grid-auto-rows: 1fr;      /* Uniform row height */
-}
+  grid-auto-rows: 1fr;      
+} 
 
 .heading-link {
   color: #1a1a1a;
@@ -471,11 +470,11 @@ select:focus {
 .certificates-section {
   display: flex;
   flex-direction: column;
-  gap: 4rem; /* Spacing between each certificate row */
+  gap: 4rem; 
 }
 
 .certificate-entry {
-  display: flow-root; /* Modern clearfix: ensures article contains the floated badge */
+  display: flow-root; 
   width: 100%;
 }
 
@@ -491,7 +490,7 @@ select:focus {
   padding: 18px;
   border-radius: 16px;
 
-  background: #0f1117;              /* Solid dark surface */
+  background: #0f1117;              
   border: 1px solid rgba(255,255,255,0.08);
 
   text-decoration: none;
@@ -507,10 +506,9 @@ select:focus {
     border-color 0.15s ease;
 
   width: 100%;
-  max-width: 140px;     /* controls grid footprint */
-  height: 180px;        /* ensures even grid rows */
-
-  justify-content: space-between; /* image top, CTA bottom */
+  max-width: 140px;     
+  height: 180px;        
+  justify-content: space-between; 
 }
 
 .badge-button img {
@@ -519,7 +517,6 @@ select:focus {
   filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.6));
 }
 
-/* Hover = subtle lift + glow (no background change) */
 .badge-button:hover {
   transform: translateY(-3px);
   border-color: rgba(0, 140, 255, 0.6);
@@ -679,7 +676,7 @@ select:focus {
     background: rgba(26, 39, 73, 0.4);
     border: 1px solid var(--border-glass);
     border-radius: 12px;
-    padding: var(--spacing-lg);
+    padding: var(--spacing-sm);
     transition: var(--transition-standard);
 }
 
