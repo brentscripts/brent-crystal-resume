@@ -3,394 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Resume</title>    
+    <title>Brent Crystal - Resume</title>    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-<!-- Header and Navigation -->
-    <header id="header-main">
-        <div class="nav-container">
-            <div class="logo-area">
-                <img class="profile-pic" src="images/brent-headshot.jpg" alt="Brent R. Crystal" >
-                <div class="logo-text">
-                    <span class="logo-glitch" data-text="B.CRYSTAL">Brent Crystal</span>
+<body class="resume-print">
+
+<div class="resume-container">
+    <header class="personal-header">
+        <div class="header-content">
+            <img class="profile-pic" src="images/brent-headshot.jpg" alt="Brent Crystal">
+            <div class="header-text">
+                <h1>Brent Crystal</h1>
+                <p class="tagline">Business Systems Developer | Epicor Integration Specialist</p>
+                <div class="contact-flex">
+                    <span><i class="fa-solid fa-envelope"></i> brentrcrystal@gmail.com</span>
+                    <span><i class="fa-solid fa-location-dot"></i> Dover, NH</span>
+                    <span>
+                        <i class="fa-brands fa-linkedin"></i> 
+                        <a href="https://www.linkedin.com/in/brent-crystal" target="_blank">://linkedin.com</a>
+                    </span>
+                    <span><i class="fa-brands fa-github"></i> ://github.com</span>
                 </div>
             </div>
-      
-            <nav>            
-                <ul class="nav-links">
-                    <li><a href="#section-experience">Experience</a></li>
-                    <li><a href="#section-projects">Projects</a></li>
-                    <li><a href="#section-skills">Skills</a></li>
-                    <li><a href="#section-development">Education</a></li>
-                    <li><a href="#section-credentials" class="btn-cta">Contact</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
-<main>
-    <!-- Hero section -->
-    <section id="section-summary" class="hero-container">
-        <img src="images/hero.jpg" alt="A blurred picture of office with computer monitor displaying code." />
-        <div class="hero-overlay">
-            <div class="hero-content">
-                <!-- Headline: Focuses on the "Why" -->
-                <h1 class="hero-title">
-                   I connect systems <span class="accent">to turn data into insight.</span>
-                </h1>
-                <div class="hero-bio">
-                    <p>
-                        <span class="hero-name">Brent</span> builds modular services and Epicor ERP integrations
-                        to turn systems and data into actionable business insight.
-                        Specializing in C#/.NET architecture, APIs, and SQL scripts.
-                    </p>
+
+    <div class="two-column-layout">
+        <!-- Left Column: Summary & Technical Skills -->
+        <aside class="sidebar">
+            <section class="resume-section">
+                <h2>Summary</h2>
+                <p class="summary-text">Building modular services and Epicor ERP integrations to turn systems and data into actionable business insight. Specializing in C#/.NET architecture, APIs, and SQL scripts.</p>
+            </section>
+
+            <section class="resume-section">
+                <h2>Tech Stack</h2>
+                <div id="skills-container">
+                    <div class="skill-category">
+                        <h3>ERP Development</h3>
+                        <p>Epicor Kinetic, Application Studio, Epicor Functions (EFx), REST API, BPM, BAQ, SSRS, BarTender.</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Software & Systems</h3>
+                        <p>C#, .NET (ASP.NET Core), SQL (T-SQL), RESTful APIs, Dapper, LINQ, OOP.</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>DevOps & Tooling</h3>
+                        <p>Git, Azure DevOps, Unit Testing (xUnit), CI/CD, Docker, Visual Studio.</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Data Architecture</h3>
+                        <p>MS SQL Server, CRUD, Data Modeling, Power BI, Python, Advanced Excel.</p>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-     <!-- Professional Experience Section -->
-
-    <!-- <section id="section-experience" class="resume-section">
-        <h2>Professional Experience</h2>
-        <div>
-            <h3 class="job-title">Business Solutions Developer | Turbocam International | Mar 2022 – Present</h3>
-            <ul>
-                <li><strong>Cost Optimization:</strong> Replaced an underutilized $15,000/year SaaS database by developing a lightweight middleware solution using PowerShell, Web API, and JSON.</li>
-                
-                <li><strong>System Integration:</strong> Engineered Web API integrations between custom software and Epicor Kinetic to automate serialized production kanban, scrap reporting (NCR/DMR), and inventory transfers.</li>
-                
-                <li><strong>Logistics Automation:</strong> Developed a real-time shipping integration to manage customer packing slips and transmit PDFs directly to workstations via server-side logic</li>
-                
-                <li><strong>Data Pipeline:</strong> Refactored a C# data pipeline to synchronize ToolBoss inventory with Epicor, automating data entry and synchronizing inventory management.</li>
-                
-                <li><strong>Platform Migration:</strong> Migrated legacy Epicor customizations and dashboards to the Kinetic SaaS UI using Application Studio.</li>
-                
-                <li><strong>Workflow Efficiency:</strong> Automated monthly labor data imports using PowerShell and Epicor DMT, incorporating automated file monitoring and error logging.</li> 
-                
-                <li><strong>Team Documentation:</strong> Created a centralized documentation site and onboarding resources using MkDocs to streamline developer training.</li>
-            </ul>
-
-            <h3 class="job-title">Business Analyst | Turbocam International | Jan 2018 – Feb 2022</h3>
-            <ul>
-                <li><strong>Spearheaded manufacturing capacity planning</strong> by developing custom Excel-based scheduling applications and workflows to optimize resource allocation.</li>
-                <li><strong>Translated complex business requirements</strong> into technical specifications for ERP enhancements, focusing on KPI tracking and reporting accuracy.</li>
-                <li>Facilitated cross-functional user training and UAT for major ERP module deployments.</li>
-            </ul>
-
-            <h3 class="job-title">Value Stream Manager | Turbocam International | Dec 2013 – Dec 2017</h3>
-            <ul>
-                <li><strong>Directed a $4.5M operational value stream</strong>, managing a team of 9 and achieving year-over-year improvements in throughput and quality.</li>
-                <li><strong>Implemented Lean/Six Sigma frameworks</strong> to reduce operational waste and costs, supported by custom-built Excel monitoring tools for real-time inventory visibility.</li>
-            </ul>
-
-            <h3 class="job-title">Account Manager | Turbocam International | Dec 2006 – Dec 2013</h3>
-            <ul>
-                <li><strong>Managed customer service and sales</strong> for top OEM customers in the processed air, gas, and aerospace industries. </li>
-                <li><strong>Secured multimillion-dollar contracts</strong> to manufacture bladed rotating components using 5-axis and nonconventional machining methods.</li>
-                <li><strong>Ensured ISO quality compliance</strong> and conducted contract review and negotiation with engineering and machinists to confirm delivery dates.</li>
-                <li><strong>Leveraged Epicor ERP system</strong> to quote, track, and manage customer accounts and sales orders efficiently.</li>
-            </ul>
-        </div>
-    </section>
-
-    <hr>
-
-    <section id="section-projects" class="resume-section">
-        <h2>Personal Projects</h2>
-        <div>
-            <h3 class="project-title">Epicor Kinetic Customizations Repository</h3>
-            <p>
-                A GitHub repository showcasing a collection of Epicor Kinetic customizations, including BPMs, BAQs, and dashboard configurations. This project serves as a resource for developers looking to enhance their Epicor implementations with practical examples and reusable code snippets.
-            </p>
-            <a href="https://github.com/brentcrystal/kinetic-customizations">View Repository</a>
-    </section>
-
-    <section id="section-skills" class="resume-section">
-    <h2>Technologies & Frameworks</h2>
-        <div class="skills-grid">
-            <ul>
-                <li><strong>ERP Development (Epicor Kinetic):</strong> Kinetic Application Studio (UI Layers/Events), Epicor Functions (EFx), REST API Integration, BPM, BAQ, Dashboards, SSRS, BarTender (Automated Labeling).</li>
-                
-                <li><strong>Software & Systems:</strong> C#, .NET (ASP.NET Core), SQL (T-SQL), RESTful APIs, Dapper (Micro-ORM), LINQ, Object-Oriented Programming (OOP), .NET Framework.</li>
-                
-                <li><strong>DevOps & Tooling:</strong> Git, Azure DevOps, Unit Testing (xUnit), CI/CD Pipelines, Docker, Visual Studio, VS Code, NuGet.</li>
-                
-                <li><strong>Data Architecture & Analytics:</strong> MS SQL Server, CRUD Operations, Data Modeling, Power BI, Python, Advanced Excel (Power Query, PowerPivot).</li>
-                
-                <li><strong>Technical Documentation:</strong> Material for MkDocs, OpenAPI/Swagger.</li>
-
-                <li><strong>Operational Excellence:</strong> Lean Manufacturing, Six Sigma Green Belt, Value Stream Mapping (VSM).</li>
-            </ul>
-        </div>
-    </section> -->
-    
-    <section id="section-experience" class="resume-section">
-    <h2 class="section-title">Professional <span class="accent">Experience</span></h2>
-    
-    <div class="experience-ledger">
-        <!-- ROLE 1: Business Solutions Developer -->
-        <article class="exp-card">
-            <div class="exp-header">
-                <div class="title-group">
-                    <h3 class="job-title">Business Systems Developer</h3>
-                    <span class="company">Turbocam International | Mar 2022 – Present</span>
+            <section class="resume-section">
+                <h2>Education</h2>
+                <div class="education-compact">
+                    <p><strong>B.A. Occupational Health & Safety</strong><br>
+                    Focus: Compliance & Continuous Improvement</p>
+                    <p><strong>Tim Corey's Dev Forge</strong><br>
+                    C# Master Course, Web Dev Master Course, Web API, Blazor, SQL & DevOps</p>
+                    <p><strong>Professional Development (Udemy)</strong><br>
+                    Dr. Angela Yu's Python BootCamp (Expected Mar 2026)<br>Dr. Angela Yu's Full-Stack BootCamp (Expected Dec 2026)</p>
                 </div>
-            </div>
-            <div class="exp-body">
-                <ul class="exp-bullets">
-                    <li><span class="highlight">Cost Optimization:</span> Replaced an underutilized $15,000/year SaaS database by developing a lightweight middleware solution using PowerShell, Web API, and JSON.</li>
-                    <li><span class="highlight">System Integration:</span> Engineered Web API integrations between custom software and Epicor Kinetic to automate serialized production kanban, scrap reporting (NCR/DMR), and inventory transfers.</li>
-                    <li><span class="highlight">Logistics Automation:</span> Developed a real-time shipping integration to manage customer packing slips and transmit PDFs directly to workstations via server-side logic.</li>
-                    <li><span class="highlight">Data Pipeline:</span> Refactored a C# data pipeline to synchronize ToolBoss inventory with Epicor, automating data entry and inventory management.</li>
-                    <li><span class="highlight">Platform Migration:</span> Migrated legacy Epicor customizations and dashboards to the Kinetic SaaS UI using Application Studio.</li>
-                    <li><span class="highlight">Workflow Efficiency:</span> Automated monthly labor data imports using PowerShell and Epicor DMT with automated file monitoring and error logging.</li> 
-                    <li><span class="highlight">Team Documentation:</span> Created a centralized documentation site and onboarding resources using MkDocs to streamline developer training.</li>
-                </ul>
-                <div class="tech-stack">
-                    <span class="tech-tag">C#</span> <span class="tech-tag">.NET Core</span> <span class="tech-tag">Epicor Kinetic</span> <span class="tech-tag">SQL</span> <span class="tech-tag">REST API</span>
+            </section>
+        </aside>
+
+        <!-- Right Column: Professional Experience & Projects -->
+        <main class="main-content">
+            <section class="resume-section">
+                <h2>Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <h3>Business Solutions Developer</h3>
+                        <span class="date">Mar 2022 – Present</span>
+                    </div>
+                    <p class="company">Turbocam International</p>
+                    <ul>
+                        <li><strong>Cost Optimization:</strong> Replaced $15,000/year SaaS database with a lightweight middleware solution using PowerShell, Web API, and JSON.</li>
+                        <li><strong>Cross-Functional Collaboration:</strong> Engineered Web API integrations between custom software and Epicor Kinetic to automate production kanban and inventory transfers.</li>
+                        <li><strong>Process Automation:</strong> Developed real-time shipping integration managing customer packing slips via server-side logic.</li>
+                        <li><strong>Data Pipeline:</strong> Refactored C# data pipeline to synchronize ToolBoss inventory with Epicor.</li>
+                        <li><strong>Workflow Efficiency:</strong> Automated monthly labor data imports using PowerShell and Epicor DMT.</li>
+                        <li><strong>Legacy Migration:</strong> Migrated legacy Epicor customizations to Kinetic SaaS UI using Application Studio.</li>
+                        <li><strong>UI/UX Customization:</strong> Developed custom UI layers and events in Kinetic Application Studioto improve user experience.</li>
+                        <li><strong>Team Documentation:</strong> Created a centralized documentation site and onboarding resources using MkDocs to streamline developer training.</li>
+                    </ul>
                 </div>
-            </div>
-        </article>
 
-        <!-- ROLE 2: Business Analyst -->
-<article class="exp-card">
-    <div class="exp-header">
-        <div class="title-group">
-            <h3 class="job-title">Business Analyst</h3>
-            <span class="company">Turbocam International | Jan 2018 – Feb 2022</span>
-        </div>
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <h3>Business Analyst</h3>
+                        <span class="date">Jan 2018 – Feb 2022</span>
+                    </div>
+                    <p class="company">Turbocam International</p>
+                    <ul>
+                        <li>Spearheaded manufacturing capacity planning via custom Excel-based scheduling applications.</li>
+                        <li>Translated business requirements into technical specs for ERP enhancements and KPI tracking.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <h3>Value Stream Manager</h3>
+                        <span class="date">Dec 2013 – Dec 2017</span>
+                    </div>
+                    <p class="company">Turbocam International</p>
+                    <ul>
+                        <li>Directed a $4.5M operational value stream, achieving throughput and quality improvements.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="resume-section">
+                <h2>Personal Projects</h2>
+                <div class="project-item">
+                    <h3>Epicor Kinetic Customizations Repository</h3>
+                    <p>GitHub repository showcasing BPMs, BAQs, and dashboard configurations for community use.</p>
+                </div>
+            </section>
+        </main>
     </div>
-    <div class="exp-body">
-        <ul class="exp-bullets">
-            <li><span class="highlight">Capacity Planning:</span> Spearheaded manufacturing scheduling by developing custom Excel-based applications and workflows to optimize resource allocation.</li>
-            <li><span class="highlight">ERP Strategy:</span> Translated complex business requirements into technical specifications for ERP enhancements, focusing on KPI tracking and reporting accuracy.</li>
-            <li><span class="highlight">System Deployment:</span> Facilitated cross-functional user training and UAT for major ERP module deployments.</li>
-            <li><span class="highlight">Data Visualization:</span> Built complex Epicor BAQs, dashboards, and custom SSRS reports to support data-driven decision-making.</li>
-            <li><span class="highlight">Process Automation:</span> Developed Epicor classic form customizations, updatable BAQs, and BPMs to streamline business processes.</li>
-        </ul>
-        <div class="tech-stack">
-            <span class="tech-tag">Epicor ERP</span> <span class="tech-tag">BAQ/BPM</span> <span class="tech-tag">SSRS</span> <span class="tech-tag">Excel</span> <span class="tech-tag">KPI Tracking</span>
-        </div>
-    </div>
-</article>
-
-<!-- ROLE 3: Value Stream Manager -->
-<article class="exp-card">
-    <div class="exp-header">
-        <div class="title-group">
-            <h3 class="job-title">Value Stream Manager</h3>
-            <span class="company">Turbocam International | Dec 2013 – Dec 2017</span>
-        </div>
-    </div>
-    <div class="exp-body">
-        <ul class="exp-bullets">
-            <li><span class="highlight">Operations Management:</span> Directed a $4.5M operational value stream, managing a team of 9 and multiple precision machining cells.</li>
-            <li><span class="highlight">Performance Growth:</span> Achieved year-over-year improvements in sales throughput and significantly reduced scrap rates.</li>
-            <li><span class="highlight">Continuous Improvement:</span> Implemented Operational Excellence and Lean/Six Sigma methodologies to eliminate operational waste.</li>
-            <li><span class="highlight">Decision Tooling:</span> Developed custom-built Excel tools for real-time capacity planning, scheduling, and resource allocation.</li>
-            <li><span class="highlight">Quality Leadership:</span> Completed a Lean Six Sigma Green Belt project to reduce scrap on complex turbine assemblies, lowering Cost of Poor Quality (COPQ).</li>
-            <li><span class="highlight">Supply Chain:</span> Collaborated with planners to manage raw material supply chains, inventory levels, and supplier relationships.</li>
-        </ul>
-        <div class="tech-stack">
-            <span class="tech-tag">Lean Six Sigma</span> <span class="tech-tag">Operational Excellence</span> <span class="tech-tag">VSM</span> <span class="tech-tag">Excel</span> <span class="tech-tag">Supply Chain</span>
-        </div>
-    </div>
-</article>
-
-<!-- ROLE 4: Account Manager -->
-<article class="exp-card">
-    <div class="exp-header">
-        <div class="title-group">
-            <h3 class="job-title">Account Manager</h3>
-            <span class="company">Turbocam International | Dec 2006 – Dec 2013</span>
-        </div>
-    </div>
-    <div class="exp-body">
-        <ul class="exp-bullets">
-            <li><span class="highlight">Strategic Sales:</span> Managed customer service and sales for top-tier OEM customers in the aerospace and gas industries.</li>
-            <li><span class="highlight">Contract Acquisition:</span> Secured multimillion-dollar contracts for complex 5-axis bladed components.</li>
-            <li><span class="highlight">ISO Compliance:</span> Ensured ISO quality compliance and conducted technical contract reviews to confirm feasibility and delivery dates.</li>
-            <li><span class="highlight">ERP Utilization:</span> Leveraged the Epicor ERP system to quote, track, and manage customer accounts and sales orders efficiently.</li>
-        </ul>
-        <div class="tech-stack">
-            <span class="tech-tag">Epicor CRM</span> <span class="tech-tag">Contract Review</span> <span class="tech-tag">ISO Quality</span> <span class="tech-tag">OEM Strategy</span>
-        </div>
-    </div>
-</article>
-
-    <hr>
-
-    <section id="section-development" class="resume-section">
-        <h2>Professional Development</h2>
-         <a class="heading-link" href="https://www.iamtimcorey.com/">
-            <h3>Tim Corey's DevForge</h3>
-        </a> 
-        <article class="certificate-entry">
-            <a class="badge-button" href="certificates/CERTIFICATE_CsharpMasterCourse.pdf" aria-label="View C# MasterCourse Certificate">
-            <img src="images/badge-csharp-master.png" alt="C# MasterCourse completion badge" />
-            <span class="badge-action">View Certificate</span>
-            </a>
-            <div class="certificate-content">
-                <h4 class="course-title">C# MasterCourse</h4>
-                <p class="course-text">
-                    A comprehensive, extended course focused on building strong, real-world C# development skills. The course covered core and advanced topics such as object-oriented programming, ASP.NET Core, Blazor, LINQ, and debugging best practices, emphasizing practical, professional-grade coding techniques that improve code quality, efficiency, and maintainability.
-                </p> 
-             </div>
-        </article>
-        <article class="certificate-entry">
-            <a class="badge-button" href="certificates/CERTIFICATE_WebDevMasterCourse.pdf" aria-label="Web Development MasterCourse Certificate">
-            <img src="images/badge-web-dev-master.png" alt="Web Development MasterCourse completion badge" />
-            <span class="badge-action">View Certificate</span>
-            </a>
-            <div class="certificate-content">
-                <h4 class="course-title">Web Development MasterCourse</h4>
-                <p class="course-text">
-                    In-depth knowledge of how the web works, including DNS, SSL, and server fundamentals, along with in-depth training in HTML, CSS, JavaScript, web tooling, accessibility, and SEO. Provides practical instruction on building, deploying, and optimizing full-featured, professional-quality websites.s, along with in-depth training in HTML, CSS, JavaScript, web tooling, accessibility, and SEO. Provides practical instruction on building, deploying, and optimizing full-featured, professional-quality websites.
-                </p> 
-             </div>
-        </article>
-        <article class="certificate-entry">
-            <a class="badge-button" href="certificates/CERTIFICATE_WebApi.pdf" aria-label="Web API From Start to Finish Certificate">
-            <img src="images/badge-web-api.png" alt="Web API From Start to Finish completion badge" />
-            <span class="badge-action">View Certificate</span>
-            </a>
-            <div class="certificate-content">
-                <h4 class="course-title">Web API From Start to Finish</h4>
-                <p class="course-text">
-                    In-depth instruction on building, securing, and maintaining RESTful APIs using ASP.NET Core, covering topics such as authentication, versioning, documentation with Swagger, monitoring, and performance optimization. The course provided the student with practical experience in implementing security measures, logging, health checks, and rate-limiting, equipping them to develop robust, production-ready APIs.
-                </p>
-            </div>
-        </article>
-        <article class="certificate-entry">
-            <a class="badge-button" href="certificates/CERTIFICATE_Blazor.pdf" aria-label="Blazor From Start to Finish Certificate">
-            <img src="images/badge-blazor.png" alt="Blazor From Start to Finish completion badge" />
-            <span class="badge-action">View Certificate</span>
-            </a>
-            <div class="certificate-content">
-                <h4 class="course-title">Blazor From Start to Finish</h4>
-                <p class="course-text">
-                    In-depth instruction in building scalable Blazor applications using .NET, covering server-side, hybrid, and client-side rendering, component-based architecture, routing, dependency injection, and state management. The course provided the student with practical experience through real-world scenarios and assessments, equipping them with the skills to develop full-stack applications using Blazor.
-                </p>
-            </div>
-        </article>
-        <article class="certificate-entry">
-            <a class="badge-button" href="certificates/CERTIFICATE_BlazorServer.pdf" aria-label="Blazor Server From Start to Finish Certificate">
-            <img src="images/badge-blazor-server.png" alt="Blazor From Start to Finish completion badge" />
-            <span class="badge-action">View Certificate</span>
-            </a>
-            <div class="certificate-content">
-                <h4 class="course-title">Blazor Server From Start to Finish</h4>
-                <p class="course-text">
-                    In-depth instruction on building scalable Blazor Server applications using .NET, with a focus on server-side rendering, component-based architecture, routing, dependency injection, and state management. The course provided hands-on experience through real-world scenarios and assessments, equipping the student with the skills to design and develop robust, full-stack web applications using Blazor Server.
-                </p>
-            </div>
-        </article>
-        <article class="certificate-entry">
-            <a class="badge-button" href="certificates/CERTIFICATE_SqlDatabases.pdf" aria-label="SQL Database From Start to Finish Certificate">
-            <img src="images/badge-sql-database.png" alt="SQL Database From Start to Finish completion badge" />
-            <span class="badge-action">View Certificate</span>
-            </a>
-            <div class="certificate-content">
-                <h4 class="course-title">SQL Database From Start to Finish</h4>
-                <p class="course-text">
-                    In-depth SQL Database training covering full CRUD, Backups, Database, Queries, SQL, SSMS, Stored Procedures, and Table Design
-                </p>
-            </div>
-        </article>
-        <article class="certificate-entry">
-            <a class="badge-button" href="certificates/CERTIFICATE_Git.pdf" aria-label="Git From Start to Finish Certificate">
-            <img src="images/badge-git.png" alt="Git From Start to Finish completion badge" />
-            <span class="badge-action">View Certificate</span>
-            </a>
-            <div class="certificate-content">
-                <h4 class="course-title">Git From Start to Finish</h4>
-                <p class="course-text">                    	
-                    In-depth instruction on using Git for version control, covering key concepts such as repositories, commits, branches, merges, and remotes. The course provided the student with practical experience in managing code changes, collaborating with teams, and utilizing various Git clients, including command-line tools. Equipped the student with the skills to effectively track project history and collaborate successfully in software development environments.
-                </p>
-            </div>
-        </article>
-        <article class="certificate-entry">
-            <a class="badge-button" href="certificates/CERTIFICATE_DatabaseDevOps.pdf" aria-label="Database DevOps From Start to Finish Certificate">
-            <img src="images/badge-db-dev-ops.png" alt="Database DevOps completion badge" />
-            <span class="badge-action">View Certificate</span>
-            </a>
-            <div class="certificate-content">
-                <h4 class="course-title">Database DevOps From Start to Finish</h4>
-                <p class="course-text">                    	
-                    In-depth instruction on utilizing SQL Server Data Tools (SSDT) for comprehensive database development and deployment. The course guided the student through building new databases, modifying existing ones, and integrating source control. Additionally, it covered implementing automated deployments, refactoring databases, and managing pre/post-deployment scripts, equipping the student with the skills to manage database changes effectively in a DevOps environment.
-                </p>
-            </div>
-        </article>
-        <article class="certificate-entry">
-            <a class="badge-button" href="certificates/CERTIFICATE_Appsettings.pdf" aria-label="AppSettings From Start to Finish Certificate">
-            <img src="images/badge-appsettings.png" alt="AppSettings completion badge" />
-            <span class="badge-action">View Certificate</span>
-            </a>
-            <div class="certificate-content">
-                <h4 class="course-title">.NET Core AppSettings From Start to Finish</h4>
-                <p class="course-text">              	
-                    In-depth instruction on configuring and managing application settings in .NET Core, covering the five default settings locations and additional options such as environment variables, command-line arguments, and custom configuration sources. The course provided the student with practical experience in implementing user secrets, Azure Key Vault, and securing sensitive data, equipping them to manage application settings effectively and securely.
-                </p>
-            </div>
-        </article>
-            
-        <h3>Udemy</h3>
-        <div>
-            <ul>
-                <li>100 Days of Code: The Complete Python Pro Bootcamp (in progress, 80% complete)</li>
-                <li>The Complete Full-Stack Web Development Bootcamp (in progress, 10% complete)</li>
-            </ul>
-    </section>
-
-    <hr>
-
-    <section id="section-education" class="resume-section">
-        <h2>Formal Education</h2>
-        <div>
-            <h3>Bachelor of Science in Occupational Health and Safety Studies  | Keene, NH | 2001</h3>
-            <p>Concentration: Safety Program Administration</p>
-        </div>
-    </section>
-
-    <hr>
-
-    <section id="section-credentials" class="resume-section">
-        <h2>Professional Credentials</h2>
-        <div class="credentials-list">
-            <ul>
-                <li><strong>Six Sigma Green Belt</strong> | NH Manufacturing Extension Partnership</li>
-                <li><strong>Advanced Value Stream Design</strong> | Institute for Operational Excellence</li>
-                
-                <li><strong>Effective Communications & Human Relations</strong> | Dale Carnegie Training</li>
-                
-                <li><strong>Expert Infantryman Badge (EIB)</strong> | U.S. Army</li>
-            </ul>
-        </div>
-    </section>
-
-    <hr>
- 
-
-    <section id="section-contact" class="resume-section">
-        <h2>Contact Me</h2>
-        <div class="credentials-list">
-            <ul>
-                <li><strong>Six Sigma Green Belt</strong> | NH Manufacturing Extension Partnership</li>
-                <li><strong>Advanced Value Stream Design</strong> | Institute for Operational Excellence</li>
-                
-                <li><strong>Effective Communications & Human Relations</strong> | Dale Carnegie Training</li>
-                
-                <li><strong>Expert Infantryman Badge (EIB)</strong> | U.S. Army</li>
-            </ul>
-        </div>
-    </section>
-</main>
+</div>
+<script src="js/app.js"></script>
+<script>
+    app.HomePage();
+</script>
 </body>
-<footer id="footer-main">
-    <p>© 2026 Brent Crystal's Resume. All rights reserved.</p>
-</footer>
-</html> 
+</html>
