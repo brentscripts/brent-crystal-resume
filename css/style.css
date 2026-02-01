@@ -206,6 +206,32 @@ li strong {
     color: #000;
 }
 
+.skill-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.pill {
+    background: #edf2f7; /* Soft gray */
+    color: var(--accent);
+    font-size: var(--size-small);
+    padding: 2px 10px;
+    border-radius: 999px; /* The "Pill" shape */
+    border: 1px solid var(--border-color);
+    font-weight: 500;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.pill:hover {
+    background: var(--accent);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
 /* 8. PRINT OVERRIDES */
 @media print {
     .sidebar {
@@ -233,5 +259,12 @@ li strong {
     /* Force the header and columns to stay together */
     .personal-header, .two-column-layout {
         break-inside: avoid;
+    }
+
+    .pill {
+        border: 1px solid #ccc !important;
+        background: transparent !important;
+        color: black !important;
+        padding: 1px 6px;
     }
 }

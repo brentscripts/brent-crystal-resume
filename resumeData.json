@@ -1,0 +1,84 @@
+{
+  "header": {
+    "tagline": "Business Systems Developer | Epicor Integrations | C#/.NET Specialist",
+    "location": "Dover, NH"
+  },
+  "summary": "Building modular services and Epicor ERP integrations to turn systems and data into actionable business insight. Specializing in C#/.NET architecture, APIs, and SQL scripts.",
+  "skills": [{
+      "category": "EPICOR Development",
+      "items": ["Kinetic Application Studio", "Functions (EFx)", "REST API", "BPM", "BAQ", "DMT","SSRS", "BarTender"]
+    },
+    {
+      "category": "Software & Systems",
+      "items": ["C#", ".NET (ASP.NET Core)", "SQL (T-SQL)", "RESTful APIs", "Dapper", "LINQ", "OOP"]
+    },
+    {
+      "category": "DevOps & Tooling",
+      "items": ["Git", "Azure DevOps", "Unit Testing (xUnit)", "CI/CD", "Docker", "Visual Studio", "VS Code"]
+    },
+     {
+      "category": "Data Architecture",
+      "items": ["MS SQL Server", "CRUD", "Data Modeling", "Power BI", "Python", "Advanced Excel"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "B.A. Occupational Health & Safety Focus: Compliance & Continuous Improvement"
+    },
+    {
+      "tim-corey": "Tim Corey's Dev Forge C# Master Course, Web Dev Master Course, Web API, Blazor, SQL & DevOps"
+    },
+    {
+      "udemy": "Professional Development (Udemy) Dr. Angela Yu's Python BootCamp (Expected Mar 2026) Dr. Angela Yu's Full-Stack BootCamp (Expected Dec 2026)"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Business Solutions Developer",
+      "company": "Turbocam International",
+      "period": "Mar 2022 – Present",
+      "bullets": [
+        "Cost Optimization: Replaced $15,000/year SaaS database with a lightweight middleware solution using PowerShell, Web API, and JSON.",
+        "Cross-Functional Collaboration: Engineered Web API integrations between custom software and Epicor Kinetic to automate production kanban and inventory transfers.",
+        "Process Automation: Developed real-time shipping integration managing customer packing slips via server-side logic.",
+        "Data Pipeline: Refactored C# data pipeline to synchronize ToolBoss inventory with Epicor.",
+        "Workflow Efficiency: Automated monthly labor data imports using PowerShell and Epicor DMT.",
+        "Legacy Migration: Migrated legacy Epicor customizations to Kinetic SaaS UI using Application Studio.",
+        "UI/UX Customization: Developed custom UI layers and events in Kinetic Application Studioto improve user experience.",
+        "Team Documentation: Created a centralized documentation site and onboarding resources using MkDocs to streamline developer training."
+      ]
+
+    },
+    {
+      "role": "Business Analyst",
+      "company": "Turbocam International",
+      "period": "Jan 2018 – Mar 2022",
+      "bullets": [
+        "Spearheaded manufacturing capacity planning via custom Excel-based scheduling applications.",
+        "Translated business requirements into technical specs for ERP enhancements and KPI tracking."
+      ]
+    },
+    {
+      "role": "Value Stream Manager",
+      "company": "Turbocam International",
+      "period": "2013 – 2017",
+      "bullets": [
+        "Directed a $4.5M operational value stream, achieving throughput and quality improvements."
+      ]
+    }
+  ],
+    "projects": [
+        {
+        "name": "Epicor Kinetic Integrations",
+        "description": "Developed multiple Epicor Kinetic integrations using REST API and BPMs to automate inventory transfers, shipping processes, and data synchronization."
+        },
+        {
+        "name": "Custom Web API Middleware",
+        "description": "Built a lightweight C# Web API middleware solution to replace a costly SaaS database, enabling real-time data exchange between internal systems and Epicor."
+        },
+        {
+        "name": "PowerShell Automation Scripts",
+        "description": "Created PowerShell scripts to automate routine tasks such as data imports, exports, and report generation, significantly reducing manual effort."
+        }
+    ]
+}
