@@ -3,7 +3,7 @@
     "tagline": "Business Systems Developer | Epicor Integrations | C#/.NET Specialist",
     "location": "Dover, NH"
   },
-  "summary": "Building modular services and Epicor ERP integrations to turn systems and data into actionable business insight. Specializing in C#/.NET architecture, APIs, and SQL scripts.",
+  "summary": "Systems Developer with a core focus in C#/.NET and Epicor ERP environments. Experienced in building custom integrations, REST APIs, and SQL scripts to automate business processes. Passionate about writing clean, functional code and leveraging data to improve operational efficiency.",
   "skills": [{
       "category": "EPICOR Development",
       "items": ["Kinetic Application Studio", "Functions (EFx)", "REST API", "BPM", "BAQ", "DMT","SSRS", "BarTender"]
@@ -21,17 +21,7 @@
       "items": ["MS SQL Server", "CRUD", "Data Modeling", "Power BI", "Python", "Advanced Excel"]
     }
   ],
-  "education": [
-    {
-      "degree": "B.A. Occupational Health & Safety Focus: Compliance & Continuous Improvement"
-    },
-    {
-      "tim-corey": "Tim Corey's Dev Forge C# Master Course, Web Dev Master Course, Web API, Blazor, SQL & DevOps"
-    },
-    {
-      "udemy": "Professional Development (Udemy) Dr. Angela Yu's Python BootCamp (Expected Mar 2026) Dr. Angela Yu's Full-Stack BootCamp (Expected Dec 2026)"
-    }
-  ],
+  
   "experience": [
     {
       "role": "Business Solutions Developer",
@@ -67,18 +57,15 @@
       ]
     }
   ],
-    "projects": [
-        {
-        "name": "Epicor Kinetic Integrations",
-        "description": "Developed multiple Epicor Kinetic integrations using REST API and BPMs to automate inventory transfers, shipping processes, and data synchronization."
-        },
-        {
-        "name": "Custom Web API Middleware",
-        "description": "Built a lightweight C# Web API middleware solution to replace a costly SaaS database, enabling real-time data exchange between internal systems and Epicor."
-        },
-        {
-        "name": "PowerShell Automation Scripts",
-        "description": "Created PowerShell scripts to automate routine tasks such as data imports, exports, and report generation, significantly reducing manual effort."
-        }
+    "personal-growth": [
+    {
+      "degree": "B.A. Occupational Health & Safety Focus: Compliance & Continuous Improvement"
+    },
+    {
+      "tim-corey": "Tim Corey's Dev Forge C# Master Course, Web Dev Master Course, Web API, Blazor, SQL & DevOps"
+    },
+    {
+      "udemy": "Professional Development (Udemy) Dr. Angela Yu's Python BootCamp (Expected Mar 2026) Dr. Angela Yu's Full-Stack BootCamp (Expected Dec 2026)"
+    }
     ]
 }
