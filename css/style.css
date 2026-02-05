@@ -232,6 +232,32 @@ li strong {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+/* New specific rules for single-company tenure */
+.company-group {
+    margin-bottom: var(--gap-section);
+}
+
+.progression-title {
+    font-size: var(--size-small);
+    text-transform: uppercase;
+    color: var(--text-light);
+    letter-spacing: 0.05em;
+    margin: var(--gap-item) 0 0.4rem 0;
+    border-top: 1px dashed var(--border-color);
+    padding-top: 0.5rem;
+}
+
+.compact-history {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.compact-history li {
+    font-size: var(--size-body);
+    margin-bottom: 0.2rem;
+}
+
+
 /* 8. PRINT OVERRIDES */
 @media print {
     .sidebar {

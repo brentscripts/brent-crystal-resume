@@ -5,20 +5,20 @@
   },
   "summary": "Systems Developer with a core focus in C#/.NET and Epicor ERP environments. Experienced in building custom integrations, REST APIs, and SQL scripts to automate business processes. Passionate about writing clean, functional code and leveraging data to improve operational efficiency.",
   "skills": [{
-      "category": "EPICOR Development",
-      "items": ["Kinetic Application Studio", "Functions (EFx)", "REST API", "BPM", "BAQ", "DMT","SSRS", "BarTender"]
+      "category": "Developer & Epicor Tools",
+      "items": ["C#", "Git", "GitHub", "Azure DevOps","Kinetic Application Studio", "Epicor Functions (EFx)", "REST API", "BPM", "BAQ", "DMT", "SSRS","BarTender"]
     },
     {
-      "category": "Software & Systems",
-      "items": ["C#", ".NET (ASP.NET Core)", "SQL (T-SQL)", "RESTful APIs", "Dapper", "LINQ", "OOP"]
+      "category": "Business Intelligence",
+      "items": ["SQL (T-SQL)", "Power BI", "Excel Power Query"]
     },
     {
-      "category": "DevOps & Tooling",
-      "items": ["Git", "Azure DevOps", "Unit Testing (xUnit)", "CI/CD", "Docker", "Visual Studio", "VS Code"]
-    },
-     {
-      "category": "Data Architecture",
-      "items": ["MS SQL Server", "CRUD", "Data Modeling", "Power BI", "Python", "Advanced Excel"]
+      "category": "Systems Automation",
+      "items": ["PowerShell", "Postman","NSwag", "OpenAPI (Swagger)", "Middleware Development", "JSON Data Integration"]
+    },    
+    {
+      "category": "Emerging Technologies",
+      "items": [".NET (ASP.NET Core)", "Python", "Azure","Docker", "Web Development", "HTML5", "CSS3", "JavaScript", "Bootstrap"]
     }
   ],
   
@@ -28,14 +28,11 @@
       "company": "Turbocam International",
       "period": "Mar 2022 – Present",
       "bullets": [
-        "Cost Optimization: Replaced $15,000/year SaaS database with a lightweight middleware solution using PowerShell, Web API, and JSON.",
-        "Cross-Functional Collaboration: Engineered Web API integrations between custom software and Epicor Kinetic to automate production kanban and inventory transfers.",
-        "Process Automation: Developed real-time shipping integration managing customer packing slips via server-side logic.",
-        "Data Pipeline: Refactored C# data pipeline to synchronize ToolBoss inventory with Epicor.",
-        "Workflow Efficiency: Automated monthly labor data imports using PowerShell and Epicor DMT.",
-        "Legacy Migration: Migrated legacy Epicor customizations to Kinetic SaaS UI using Application Studio.",
-        "UI/UX Customization: Developed custom UI layers and events in Kinetic Application Studioto improve user experience.",
-        "Team Documentation: Created a centralized documentation site and onboarding resources using MkDocs to streamline developer training."
+        "Cost Optimization: Engineered a PowerShell/JSON middleware to automate BarTender label population via Epicor Web APIs, saving $15,000 annually by eliminating redundant database replication services",
+        "System Integration: Partnered with Software Development to engineer Web API integrations between custom applications and Epicor Kinetic, automating Kanban, scrap/DMR processing, and shipping documentation.",
+        "Process Automation: Developed a modular C# library for Epicor API integrations to refactor and automate ToolBoss inventory synchronization; additionally automated monthly labor data imports using PowerShell and Epicor DMT to eliminate manual reconciliation errors and save data entry time.",
+        "Migrated legacy customizations to the Kinetic SaaS UI using Application Studio, developing custom event-driven UI layers to enhance user experience and workflow.",
+        "Team Documentation: Created a centralized documentation site and onboarding resources using MkDocs to streamline developer training and standardize departmental processes."
       ]
 
     },
