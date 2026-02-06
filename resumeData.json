@@ -1,24 +1,24 @@
 {
   "header": {
-    "tagline": "Business Systems Developer | Epicor Integrations | C#/.NET Specialist",
+    "tagline": "Business Systems Developer | Epicor Integrations | C# / .NET",
     "location": "Dover, NH"
   },
   "summary": "Systems Developer with a core focus in C#/.NET and Epicor ERP environments. Experienced in building custom integrations, REST APIs, and SQL scripts to automate business processes. Passionate about writing clean, functional code and leveraging data to improve operational efficiency.",
   "skills": [{
-      "category": "Developer & Epicor Tools",
-      "items": ["C#", "Git", "GitHub", "Azure DevOps","Kinetic Application Studio", "Epicor Functions (EFx)", "REST API", "BPM", "BAQ", "DMT", "SSRS","BarTender"]
+      "category": "Epicor & Dev Tools",
+      "items": ["C#", "Epicor Functions (EFx)", "Kinetic Application Studio", "BPM", "BAQ", "DMT", "REST API", "Postman", "OpenAPI/Swagger (NSwag)", "PowerShell", "Git", "Azure DevOps"]
     },
     {
-      "category": "Business Intelligence",
+      "category": "Data & Analytics",
       "items": ["SQL (T-SQL)", "Power BI", "Excel Power Query"]
     },
     {
-      "category": "Systems Automation",
-      "items": ["PowerShell", "Postman","NSwag", "OpenAPI (Swagger)", "Middleware Development", "JSON Data Integration"]
-    },    
+      "category": "Emerging Tech",
+      "items": ["ASP.NET Core", "Python", "Azure","Docker", "Web Development", "HTML5/CSS3", "JavaScript", "Bootstrap"]
+    },
     {
-      "category": "Emerging Technologies",
-      "items": [".NET (ASP.NET Core)", "Python", "Azure","Docker", "Web Development", "HTML5", "CSS3", "JavaScript", "Bootstrap"]
+      "category": "Veteran",
+      "items": ["U.S. Army Infantry | 94-97"]
     }
   ],
   
@@ -63,6 +63,17 @@
     },
     {
       "udemy": "Professional Development (Udemy) Dr. Angela Yu's Python BootCamp (Expected Mar 2026) Dr. Angela Yu's Full-Stack BootCamp (Expected Dec 2026)"
+    }
+    ],
+    "personal-projects": [
+    {
+      "finance-app": "B.A. Occupational Health & Safety Focus: Compliance & Continuous Improvement"
+    },
+    {
+      "password-manager": "Tim Corey's Dev Forge C# Master Course, Web Dev Master Course, Web API, Blazor, SQL & DevOps"
+    },
+    {
+      "this-resume": "Professional Development (Udemy) Dr. Angela Yu's Python BootCamp (Expected Mar 2026) Dr. Angela Yu's Full-Stack BootCamp (Expected Dec 2026)"
     }
     ]
 }
