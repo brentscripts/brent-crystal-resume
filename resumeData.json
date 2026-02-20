@@ -56,13 +56,15 @@
   ],
     "personal-growth": [
     {
-      "degree": "B.A. Occupational Health & Safety Focus: Compliance & Continuous Improvement"
+      "category": "B.A. Occupational Health & Safety",
+      "items": ["Focus: Compliance & Continuous Improvement"]
     },
     {
-      "tim-corey": "Tim Corey's Dev Forge C# Master Course, Web Dev Master Course, Web API, Blazor, SQL & DevOps"
+      "category": "Tim Corey's Dev Forge",
+      "items": ["C# Master Course, Web Dev Master Course, Web API, Blazor, SQL & DevOps"]
     },
     {
-      "udemy": "Professional Development (Udemy) Dr. Angela Yu's Python BootCamp (Expected Mar 2026) Dr. Angela Yu's Full-Stack BootCamp (Expected Dec 2026)"
+      "udemy": "Mrofessional Development (Udemy) Dr. Angela Yu's Python BootCamp (Expected Mar 2026) Dr. Angela Yu's Full-Stack BootCamp (Expected Dec 2026)"
     }
     ],
     "personal-projects": [
