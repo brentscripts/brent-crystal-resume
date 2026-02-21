@@ -213,7 +213,9 @@ li strong {
     color: #000;
 }
 
-.skill-pills {
+.skill-pills ul {
+    list-style-type: none;
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
     gap: 6px;

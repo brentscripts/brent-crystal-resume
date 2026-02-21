@@ -32,16 +32,24 @@
         summary.innerText = app.resumeItems.summary;
 
         const skillsContainer = document.getElementById('skills-container');
-        skillsContainer.innerHTML = app.resumeItems.skills.map(category => `
+        // Skills Component
+        const createPill = (text) => `<li><span class="pill">${text}</span></li>`;
+        const createCategory = (cat) => `
             <div class="skill-category">
-                <h3>${category.category}</h3>
+                <h3>${cat.category}</h3>
                 <div class="skill-pills">
-                    ${category.items.map(skill => `<span class="pill">${skill}</span>`).join('')}
+                    <ul>
+                        ${cat.items.map(createPill).join('')}
+                    </ul>
                 </div>
             </div>
-        `).join('');   
+        `;
+        skillsContainer.innerHTML = app.resumeItems.skills.map(createCategory).join('');
+             
 
-        // const experienceContainer = document.getElementById('experience-container');
+        const experienceContainer = document.getElementById('experience-container');
+        //Experience Component
+        
         // experienceContainer.innerHTML = app.resumeItems.experience.map(experience => `
         //     <div class="experience-item">
         //         <div class="exp-header">
