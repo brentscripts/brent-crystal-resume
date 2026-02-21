@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +11,8 @@
     <link href="https://fonts.googleapis.com" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="resume-print">
 
+<body class="resume-print">
 <div class="resume-container">
     <header class="personal-header">
         <div class="header-content">
@@ -45,7 +46,7 @@
                 <h2>Technical Skills</h2>
                 <div id="skills-container">
                     <div class="skill-category">
-                        <h3>EDeveloper & Epicor Tools</h3>
+                        <h3>Developer & Epicor Tools</h3>
                         <p>Kinetic, Application Studio, Functions (EFx), REST API, BPM, BAQ, SSRS, BarTender.</p>
                     </div>
                     <div class="skill-category">
@@ -66,9 +67,8 @@
 
         <!-- Right Column: Professional Experience & Projects -->
         <main class="main-content">
-            <section class="resume-section">
+            <section class="resume-section" id="experience-container">
                 <h2>Professional Experience</h2>
-
                 <!-- Main Company Header -->
                 <div class="exp-header">
                     <p class="company">Turbocam International</p>
@@ -88,53 +88,105 @@
                         <li><strong>Team Documentation:</strong> Created a centralized documentation site and onboarding resources using MkDocs to streamline developer training and standardize departmental processes.</li>
                     </ul>
                 </div>
-
+                <!--cCareer Progression Section-->
                 <div>
-                    <!-- Career Progression (Condensed) -->
-                    <p class="progression-title">Career Progression</p>
-                    <ul class="compact-history">
-                        <li><strong>Business Analyst</strong> (2018–2022): Developed Excel/VBA scheduling and capacity planning tools.</li>
-                        <li><strong>Value Stream Manager</strong> (2013–2017): Directed $4.5M operational stream and throughput improvements.</li>
-                        <li><strong>Account Manager</strong> (2005–2013): Managed external customer relationships and contributed to internal cross-functional teams.</li>
-                    </ul>
+                    <p class="company">Career Progression</p>
+                    <div class="experience-item">
+                        <div class="row-header">
+                            <h3>Business Analyst</h3>
+                            <span class="date">2018 – 2022</span>
+                        </div>
+                        <div class="details">Developed Excel/VBA scheduling and capacity planning tools.</div>
+                    </div>
+                    <div class="experience-item">
+                        <div class="row-header">
+                            <h3>Value Stream Manager</h3>
+                            <span class="date">2013 – 2017</span>
+                        </div>
+                        <div class="details">Directed $4.5M operational stream and throughput improvements.</div>
+                    </div>
+                    <div class="experience-item">
+                        <div class="row-header">
+                            <h3>Account Manager</h3>
+                            <span class="date">2005 – 2013</span>
+                        </div>
+                        <div class="details">Managed customer accounts and leveraged Epicor ERP System.</div>
+                    </div>
                 </div>
             </section>
-
-            <section class="resume-section">
+            <!-- Education & Personal Growth Section -->
+            <!-- <section class="resume-section">
                 <h2>Education & Personal Growth</h2>
                 <div class="education-compact">
-                    <p><strong>B.A. Occupational Health & Safety</strong><br>
-                    Focus: Compliance & Continuous Improvement</p>
-                    <p><strong>Tim Corey's Dev Forge</strong><br>
-                    C# Master Course, Web Dev Master Course, Web API, Blazor, SQL & DevOps</p>
-                    <p><strong>Professional Development (Udemy)</strong><br>
-                    Dr. Angela Yu's Python BootCamp (Expected Mar 2026)<br>Dr. Angela Yu's Full-Stack BootCamp (Expected Dec 2026)</p>
+                    <ul>
+                        <li><strong>B.A. Occupational Health & Safety</strong><br> Focus Compliance & Continuous Improvement</li>
+                        <li><strong>Tim Corey's Dev Forge</strong><br> C# Master Course, Web Dev Master Course, Web API, Blazor, SQL & DevOps</li>
+                        <li><strong>Professional Development (Udemy)</strong><br>
+                        Dr. Angela Yu's Python BootCamp (Expected Mar 2026)<br>Dr. Angela Yu's Full-Stack BootCamp (Expected Dec 2026)</li>
+                    </ul>
+                </div>
+            </section> -->
+            <!-- Education & Personal Growth Section -->
+            <section class="resume-section">
+                <h2>EDUCATION & PERSONAL GROWTH</h2>
+                <div class="education-grid">
+                    <!--Left Column-->
+                    <div>
+                        <div class="edu-item">
+                            <strong>B.A. Safety Studies</strong>
+                            <p class="status-tag">Focus: Process Control & Improvement</p>
+                        </div>
+                        <div class="edu-item">
+                            <strong>Tim Corey's Dev Forge</strong>
+                            <p class="status-tag">C# Master Course, Web API, Blazor, SQL & DevOps</p>
+                        </div>
+                    </div>
+                    <!--Right Column-->
+                    <div>
+                        <div class="edu-item">
+                            <strong>Python BootCamp (Udemy)</strong>
+                            <span class="status-tag">Expected Mar 2026</span>
+                        </div>
+                        <div class="edu-item">
+                            <strong>Full-Stack BootCamp (Udemy)</strong>
+                            <span class="status-tag">Expected Dec 2026</span>
+                        </div>
+                    </div>
                 </div>
             </section>
-
+            <!-- Projects Section -->
            <section class="resume-section">
                 <h2>Personal Projects</h2>
+                <div class="project-entry">
                 <div class="project-item">
-                    <div class="project-header">
-                        <strong><a href="https://github.com/brentscripts/pw-mgr" target="_blank">Password Manager</a></strong> 
-                        <span class="tech-stack">| Python, Tkinter, cryptography (Fernet)</span>
-                    </div>
-                    <p>Engineered a secure vault utilizing Fernet authenticated encryption to protect credentials with AES-128-CBC and automated integrity verification.</p>
+                    <strong>Personal Finance Pipeline</strong>
+                    <span class="project-links">
+                    <a href="http://127.0.0.1:5501/GITHUB_URL" style="text-decoration:none;">[Code]</a> 
+                    <!-- <a href="http://127.0.0.1:5501/DEMO_URL" style="text-decoration:none;">[Live Demo]</a> -->
+                    </span>
                 </div>
-                <div class="project-item">
-                    <div class="project-header">
-                        <strong><a href="https://github.com" target="_blank">Personal Finance</a></strong> 
-                        <span class="tech-stack">| .NET (C#), MySQL, PowerShell, Power BI</span>
-                    </div>
-                    <p>Engineered a full-stack data pipeline to ingest CSV financial records into MySQL for automated cash flow analysis and Power BI visualization.</p>
+                <p><em>.NET (C#) • MySQL • PowerShell • Power BI</em></p>
+                <p>Engineered a full-stack data pipeline to ingest CSV financial records...</p>
                 </div>
-                <div class="project-item">
-                    <div class="project-header">
-                        <strong><a href="https://github.com/brentscripts/brent-crystal-resume" target="_blank">My Resume</a></strong> 
-                        <span class="tech-stack">| HTML5, CSS3, JavaScript</span>
-                    </div>
-                    <p>Engineered a responsive, accessible resume using modern web standards and best practices.</p>
-                </div>
+                <!-- <div class="project-item">
+                    <ul>
+                        <li class="project-header">
+                            <strong><a href="https://github.com/brentscripts/pw-mgr" target="_blank">Password Manager</a></strong> 
+                            <span class="tech-stack">| Python, Tkinter, cryptography (Fernet)</span>
+                            <p>Engineered a secure vault utilizing Fernet authenticated encryption to protect credentials with AES-128-CBC and automated integrity verification.</p>
+                        </li>
+                        <li class="project-header">
+                            <strong><a href="https://github.com" target="_blank">Personal Finance</a></strong> 
+                            <span class="tech-stack">| .NET (C#), MySQL, PowerShell, Power BI</span>
+                            <p>Engineered a full-stack data pipeline to ingest CSV financial records into MySQL for automated cash flow analysis and Power BI visualization.</p>
+                        </li>
+                        <li class="project-header">
+                            <strong><a href="https://github.com/brentscripts/brent-crystal-resume" target="_blank">Resume Builder</a></strong> 
+                            <span class="tech-stack">| HTML5, CSS3, JavaScript</span>
+                            <p>Engineered a responsive, accessible resume using modern web standards and best practices.</p>
+                        </li>
+                    </ul>
+                </div> -->
             </section>
         </main>
     </div>

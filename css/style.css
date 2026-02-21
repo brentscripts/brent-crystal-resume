@@ -14,6 +14,8 @@
     --size-small: 8.5pt;
 
     /* Spacing variables for consistent rhythm */
+    --small-gap: 0.125rem;   /* For tight spacing like between bullets */
+    --medium-gap: 0.250rem;  /* For spacing between sections or groups */     
     --gap-section: .5rem;    /* Space between main sections */
     --gap-item: 0.6rem;       /* Space between list items or jobs */
     --line-height: 1.4;       /* Professional standard for readability */
@@ -55,7 +57,6 @@ body {
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    margin-left: 50px;
 }
 
 .profile-pic {
@@ -121,8 +122,8 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: var(--accent);
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: var(--medium-gap);
+    margin-bottom: var(--medium-gap);
     border-bottom: 1px solid var(--border-color);
     padding-bottom: 0.2rem;
 }
@@ -151,6 +152,11 @@ p, li {
     border-radius: 8px; 
     height: fit-content;
     border-right: 1px solid var(--border-color); 
+}
+
+.main-content {
+    min-width: 0;
+    overflow-wrap: break-word;
 }
 .sidebar p {
     font-size: var(--size-small);
@@ -200,7 +206,7 @@ ul {
 }
 
 li {
-    margin-bottom: 0.25rem;
+    margin-bottom: var(--small-gap);
 }
 
 li strong {
@@ -247,19 +253,70 @@ li strong {
     padding-top: 0.15rem;
 }
 
-.compact-history {
+.history-item {
     list-style-type: none;
-    padding-left: 0;
 }
 
-.compact-history li {
-    font-size: var(--size-body);
-    margin-bottom: 0.2rem;
+.row-header {
+    display: flex;
+    justify-content: space-between; /* Pushes category left, date right */
+    align-items: baseline;        /* Keeps text aligned at the bottom */
+}
+
+.details {
+    margin-top: 0px; /* Adds a little space under the header row */
+    display: block; 
+    font-size: var(--size-body);/* Ensures it stays on its own line */
 }
 
 .project-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
     margin-bottom: 0.2rem;
     font-size: var(--size-body);
+}
+
+/* 7.1 PROJECTS */
+.project-title {
+  text-decoration: none;
+  color: #2d3436;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.project-title:hover {
+  border-bottom: 2px solid #0984e3; /* A professional blue */
+}
+
+.project-links a {
+  margin-left: 10px;
+  color: #636e72;
+  font-size: 1.1rem;
+}
+
+.project-links a:hover {
+  color: #0984e3;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 20px;                      /* Space between columns */
+  align-items: start;
+  font-size: var(--size-body);
+}
+
+.edu-item {
+  margin-bottom: var(--medium-gap);             /* Tighten vertical spacing */
+}
+
+.edu-item strong {
+  display: block;
+}
+
+.status-tag {
+  font-style: italic;
 }
 
 /* 8. PRINT OVERRIDES */
@@ -297,4 +354,25 @@ li strong {
         color: black !important;
         padding: 1px 6px;
     }
+
+    /* Remove colors/shadows that might look muddy when printed */
+    .project-links a {
+        color: black !important;
+        text-decoration: underline;
+    }
+    /* Ensure no page breaks happen in the middle of a project */
+    .project-entry, .education-item {
+        break-inside: avoid;
+    }
+    /* Tighten up the margins for the physical page */
+    body {
+        margin: 0;
+        font-size: 10pt; 
+    }
+}
+
+@media (max-width: 480px) {
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
 }
