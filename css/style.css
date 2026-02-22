@@ -271,6 +271,24 @@ li strong {
     font-size: var(--size-body);/* Ensures it stays on its own line */
 }
 
+.exp-label{
+font-weight: bold;
+}
+
+#career-progression {
+    display: grid;
+    /* Col 1 takes remaining space, Col 2 fits the text exactly */
+    grid-template-columns: 1fr auto; 
+    gap: 0.1rem .1rem; /* Row gap and Column gap */
+    align-items: center;
+    font-size: var(--size-body);
+}
+
+/* Item 1 and 2 stay in Column 1 */
+.item-1, .item-3 {
+    grid-column: 1;
+}
+
 .project-item{
     display: flex;
     justify-content: space-between;

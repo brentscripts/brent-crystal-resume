@@ -45,21 +45,39 @@
             </div>
         `;
         skillsContainer.innerHTML = app.resumeItems.skills.map(createCategory).join('');
-             
 
-        const experienceContainer = document.getElementById('experience-container');
         //Experience Component
+        createExperienceSection("experience-current");
+        renderCompactHistory(app.resumeItems.careerProgression);
+    }
+
+    function createExperienceSection(exp){
+        const experienceContainer = document.getElementById(exp);
+        const createExperienceItem = (detail) => `<li><span class="exp-label">${detail.label}:</span> <span class="exp-text">${detail.text}</span></li>`;
+        const createExperiencePast = (exp) => `
+            <div class="experience-item">
+                <div class="exp-header">
+                    <h3>${exp.title}</h3>
+                    <span class="date">${exp.date}</span>
+                </div>
+                <ul>
+                    ${exp.details.map(createExperienceItem).join('')}
+                </ul>
+            </div>
+        `;
+        experienceContainer.innerHTML = app.resumeItems[exp].map(createExperiencePast).join('');
+    }
+
+    function renderCompactHistory(data) {
+        const historyContainer = document.getElementById('career-progression');
         
-        // experienceContainer.innerHTML = app.resumeItems.experience.map(experience => `
-        //     <div class="experience-item">
-        //         <div class="exp-header">
-        //             <h3>${experience.title}</h3>
-        //             <span class="date">${experience.date}</span>
-        //         </div>
-        //         <ul>
-        //             ${experience.details.map(detail => `<li>${detail}</li>`).join('')}
-        //         </ul>
-        //     </div>
-        // `).join('');   
+        // Wrap each in a span and give the 3rd one a special class
+        const historyHtml = data.map((item, index) => 
+            `<span class="history-chip item-${index + 1}">
+                <strong>${item.role}</strong> <span class="date">${item.years}</span>
+            </span>`
+        ).join('');
+
+        historyContainer.innerHTML = historyHtml;
     }
 })(window.app = window.app || {});

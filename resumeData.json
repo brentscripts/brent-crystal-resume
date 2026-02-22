@@ -18,43 +18,52 @@
     },
     {
       "category": "Veteran",
-      "items": ["U.S. Army Infantry | 94-97"]
+      "items": ["U.S. Army Infantry | 1994-1997"]
     }
   ],
-  
   "experience-current": [
     {
       "title": "Business Systems Developer",
       "date": "Mar 2022 – Present",
       "details": [
-        "Cost Optimization: Engineered a PowerShell/JSON middleware to automate BarTender label population via Epicor Web APIs, saving $15,000 annually by eliminating redundant database replication services.",
-        "System Integration: Partnered with Software Development to engineer Web API integrations between custom applications and Epicor Kinetic; utilized NSwag and OpenAPI (Swagger) to generate type-safe clients, automating Kanban, scrap/DMR processing, and shipping documentation.",
-        "Process Automation: Developed a modular C# library for Epicor API integrations to refactor and automate ToolBoss inventory synchronization; additionally automated monthly labor data imports using PowerShell and Epicor DMT to eliminate manual reconciliation errors and save data entry time.",
-        "UI/UX Customization: Migrated legacy customizations to the Kinetic SaaS UI using Application Studio, developing custom event-driven UI layers to enhance user experience and workflow.",
-        "Team Documentation: Created a centralized documentation site and onboarding resources using MkDocs to streamline developer training and standardize departmental processes."
+        {
+          "label": "Cost Optimization",
+          "text": "Engineered a PowerShell/JSON middleware to automate BarTender label population via Epicor Web APIs, saving $15,000 annually by eliminating redundant database replication services."
+        },
+        {
+          "label": "System Integration",
+          "text": "Partnered with Software Development to engineer Web API integrations between custom applications and Epicor Kinetic; utilized NSwag and OpenAPI (Swagger) to generate type-safe clients, automating Kanban, scrap/DMR processing, and shipping documentation."
+        },
+        {
+          "label": "Process Automation",
+          "text": "Developed a modular C# library for Epicor API integrations to refactor and automate ToolBoss inventory synchronization; additionally automated monthly labor data imports using PowerShell and Epicor DMT to eliminate manual reconciliation errors and save data entry time."
+        },
+        {
+          "label": "UI/UX Customization",
+          "text": "Migrated legacy customizations to the Kinetic SaaS UI using Application Studio, developing custom event-driven UI layers to enhance user experience and workflow."
+        },
+        {
+          "label": "Team Documentation",
+          "text": "Created a centralized documentation site and onboarding resources using MkDocs to streamline developer training and standardize departmental processes."
+        }
       ]
-    }],
-    "experience-past": [
-    {
-      "title": "Business Analyst",
-      "date": "Jan 2018 – Mar 2022",
-      "details": [
-        "Developed Excel/VBA scheduling and capacity planning tools."
-      ]
+    }
+  ],
+  "careerProgression": [
+    { 
+      "role": "Business Analyst", 
+      "years": "2018–2022", 
+      "highlight": "VBA/Scheduling" 
     },
-    {
-      "title": "Value Stream Manager",
-      "date": "2013 – 2017",
-      "details": [
-        "Directed $4.5M operational stream and throughput improvements."
-      ]
+    { 
+      "role": "Value Stream Manager", 
+      "years": "2013–2017", 
+      "highlight": "Ops Management" 
     },
-    {
-      "title": "Account Manager",
-      "date": "2005 – 2013",
-      "details": [
-        "Managed customer accounts and leveraged Epicor ERP System."
-      ]
+    { 
+      "role": "Account Manager", 
+      "years": "2005–2013", 
+      "highlight": "ERP Strategy" 
     }
   ],
     "personal-growth": [
