@@ -31,8 +31,14 @@
         const summary = document.querySelector('.summary-text');
         summary.innerText = app.resumeItems.summary;
 
-        const skillsContainer = document.getElementById('skills-container');
-        // Skills Component
+        createSkillsSection("skills-container");
+        createExperienceSection("experience");
+        renderCompactHistory(app.resumeItems.careerProgression);
+        renderEducationData(app.resumeItems.personalGrowth);
+    }
+
+    function createSkillsSection(skill){
+       const skillsContainer = document.getElementById(skill);
         const createPill = (text) => `<li><span class="pill">${text}</span></li>`;
         const createCategory = (cat) => `
             <div class="skill-category">
@@ -45,10 +51,6 @@
             </div>
         `;
         skillsContainer.innerHTML = app.resumeItems.skills.map(createCategory).join('');
-
-        //Experience Component
-        createExperienceSection("experience-current");
-        renderCompactHistory(app.resumeItems.careerProgression);
     }
 
     function createExperienceSection(exp){
@@ -74,10 +76,22 @@
         // Wrap each in a span and give the 3rd one a special class
         const historyHtml = data.map((item, index) => 
             `<span class="history-chip item-${index + 1}">
-                <strong>${item.role}</strong> <span class="date">${item.years}</span>
+                <strong>${item.role}</strong><br><span class="date">${item.years}</span>
             </span>`
         ).join('');
 
         historyContainer.innerHTML = historyHtml;
     }
+
+    function renderEducationData(data) {
+        const container = document.getElementById('education-container');
+        container.innerHTML = data.map(edu => `
+            <p>
+                <strong>${edu.category}</strong>
+                <span class="edu-description"><em>${edu.description}</em></span>
+            </p>
+        `).join('');
+    }
+
+
 })(window.app = window.app || {});

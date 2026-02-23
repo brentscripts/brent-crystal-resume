@@ -18,12 +18,12 @@
     },
     {
       "category": "Veteran",
-      "items": ["U.S. Army Infantry | 1994-1997"]
+      "items": ["U.S. Army Infantry | 1994 - 1997"]
     }
   ],
-  "experience-current": [
+  "experience": [
     {
-      "title": "Business Systems Developer",
+      "title": "Business Systems Developer",  
       "date": "Mar 2022 – Present",
       "details": [
         {
@@ -51,43 +51,48 @@
   ],
   "careerProgression": [
     { 
-      "role": "Business Analyst", 
-      "years": "2018–2022", 
+      "role": "Business Analyst | 4 yrs", 
+      "years": "Jan 2018 – Mar 2022", 
       "highlight": "VBA/Scheduling" 
     },
     { 
-      "role": "Value Stream Manager", 
-      "years": "2013–2017", 
+      "role": "Value Stream Manager | 4 yrs", 
+      "years": "Dec 2013 – Dec 2017", 
       "highlight": "Ops Management" 
     },
     { 
-      "role": "Account Manager", 
-      "years": "2005–2013", 
+      "role": "Account Manager | 7 yrs", 
+      "years": "Dec 2006 – Dec 2013", 
       "highlight": "ERP Strategy" 
     }
   ],
-    "personal-growth": [
+    "personalGrowth": [
     {
-      "category": "B.A. Occupational Health & Safety",
-      "items": ["Focus: Compliance & Continuous Improvement"]
+      "category": "B.A. Safety Science",
+      "description": "Focus: Process Control & Improvement"
     },
     {
       "category": "Tim Corey's Dev Forge",
-      "items": ["C# Master Course, Web Dev Master Course, Web API, Blazor, SQL & DevOps"]
+      "description": "C# Master Course, Web Dev Master Course, ASP.NET Core, SQL & DevOps"
     },
     {
-      "udemy": "Mrofessional Development (Udemy) Dr. Angela Yu's Python BootCamp (Expected Mar 2026) Dr. Angela Yu's Full-Stack BootCamp (Expected Dec 2026)"
+      "category": "Python BootCamp (Udemy)",
+      "description": "Expected Mar 2026"
+    },
+    {
+      "category": "Full-Stack BootCamp (Udemy)",
+      "description": "Expected Dec 2026"
     }
     ],
-    "personal-projects": [
+    "personalProjects": [
     {
-      "finance-app": "B.A. Occupational Health & Safety Focus: Compliance & Continuous Improvement"
+      "financeApp": "B.A. Occupational Health & Safety Focus: Compliance & Continuous Improvement"
     },
     {
-      "password-manager": "Tim Corey's Dev Forge C# Master Course, Web Dev Master Course, Web API, Blazor, SQL & DevOps"
+      "passwordManager": "Tim Corey's Dev Forge C# Master Course, Web Dev Master Course, Web API, Blazor, SQL & DevOps"
     },
     {
-      "this-resume": "Professional Development (Udemy) Dr. Angela Yu's Python BootCamp (Expected Mar 2026) Dr. Angela Yu's Full-Stack BootCamp (Expected Dec 2026)"
+      "thisResume": "Professional Development (Udemy) Dr. Angela Yu's Python BootCamp (Expected Mar 2026) Dr. Angela Yu's Full-Stack BootCamp (Expected Dec 2026)"
     }
     ]
 }

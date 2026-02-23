@@ -276,17 +276,13 @@ font-weight: bold;
 }
 
 #career-progression {
-    display: grid;
+    display: flex;
+    justify-content: space-between;
     /* Col 1 takes remaining space, Col 2 fits the text exactly */
-    grid-template-columns: 1fr auto; 
-    gap: 0.1rem .1rem; /* Row gap and Column gap */
-    align-items: center;
+    /* grid-template-columns: auto 1fr;  */
+    /* gap: 0.1rem 2rem; */
+    /* align-items: center; */
     font-size: var(--size-body);
-}
-
-/* Item 1 and 2 stay in Column 1 */
-.item-1, .item-3 {
-    grid-column: 1;
 }
 
 .project-item{
@@ -319,20 +315,16 @@ font-weight: bold;
   color: #0984e3;
 }
 
-.education-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Two equal columns */
-  gap: 20px;                      /* Space between columns */
-  align-items: start;
-  font-size: var(--size-body);
+#education-container p {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on mobile/narrow sidebars */
+    gap: 0.5rem;      /* Space around the delimiter */
+    margin-bottom: 0.3rem; /* Tight spacing between entries */
+    align-items: baseline;
 }
 
-.edu-item {
-  margin-bottom: var(--medium-gap);             /* Tighten vertical spacing */
-}
-
-.edu-item strong {
-  display: block;
+.edu-description {
+    color: var(--text-muted, #555);
 }
 
 .status-tag {
