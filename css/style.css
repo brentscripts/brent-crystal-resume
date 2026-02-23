@@ -272,16 +272,13 @@ li strong {
 }
 
 .exp-label{
-font-weight: bold;
+    font-weight: bold;
 }
 
 #career-progression {
     display: flex;
     justify-content: space-between;
-    /* Col 1 takes remaining space, Col 2 fits the text exactly */
-    /* grid-template-columns: auto 1fr;  */
-    /* gap: 0.1rem 2rem; */
-    /* align-items: center; */
+    align-items: baseline;
     font-size: var(--size-body);
 }
 
@@ -295,41 +292,39 @@ font-weight: bold;
 
 /* 7.1 PROJECTS */
 .project-title {
-  text-decoration: none;
-  color: #2d3436;
-  border-bottom: 2px solid transparent;
-  transition: border-color 0.3s ease;
+    text-decoration: none;
+    color: #2d3436;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
 }
 
 .project-title:hover {
-  border-bottom: 2px solid #0984e3; /* A professional blue */
+    border-bottom: 2px solid #0984e3; /* A professional blue */
 }
 
 .project-links a {
-  margin-left: 10px;
-  color: #636e72;
-  font-size: 1.1rem;
+    margin-left: 10px;
+    color: #636e72;
+    font-size: 1.1rem;
 }
 
 .project-links a:hover {
-  color: #0984e3;
+    color: #0984e3;
 }
 
-#education-container p {
-    display: flex;
-    flex-wrap: wrap; /* Allows wrapping on mobile/narrow sidebars */
-    gap: 0.5rem;      /* Space around the delimiter */
-    margin-bottom: 0.3rem; /* Tight spacing between entries */
-    align-items: baseline;
+#education-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 5px;
+    font-size: var(--size-body);
 }
 
 .edu-description {
     color: var(--text-muted, #555);
+    font-style: italic;
 }
 
-.status-tag {
-  font-style: italic;
-}
 
 /* 8. PRINT OVERRIDES */
 @media print {

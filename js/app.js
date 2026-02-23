@@ -87,8 +87,8 @@
         const container = document.getElementById('education-container');
         container.innerHTML = data.map(edu => `
             <p>
-                <strong>${edu.category}</strong>
-                <span class="edu-description"><em>${edu.description}</em></span>
+                <strong>${edu.category}</strong><br>
+                <span class="edu-description">${edu.description}</span>
             </p>
         `).join('');
     }
