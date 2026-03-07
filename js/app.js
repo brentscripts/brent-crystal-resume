@@ -35,6 +35,7 @@
         createExperienceSection("experience");
         renderCompactHistory(app.resumeItems.careerProgression);
         renderEducationData(app.resumeItems.personalGrowth);
+        renderPersonalProjects(app.resumeItems.personalProjects);
     }
 
     function createSkillsSection(skill){
@@ -90,6 +91,20 @@
                 <strong>${edu.category}</strong><br>
                 <span class="edu-description">${edu.description}</span>
             </p>
+        `).join('');
+    }
+
+    function renderPersonalProjects(data) {
+        const container = document.getElementById('projects-container');
+        container.innerHTML = data.map(project => `
+            <div class="project-item">
+                <strong>${project.name}</strong>
+                <span class="project-links">
+                    <a href=${project.codeLink} style="text-decoration:none;">[Code]</a> 
+                </span>
+            </div>
+            <p><em>${project.stack}</em></p>
+            <p>${project.description}</p>
         `).join('');
     }
 

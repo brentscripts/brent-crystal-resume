@@ -3,7 +3,7 @@
     "tagline": "Business Systems Developer | Epicor Integrations | C# / .NET",
     "location": "Dover, NH"
   },
-  "summary": "Systems Developer with a core focus in C#/.NET and Epicor ERP environments. Experienced in building custom integrations, REST APIs, and SQL scripts to automate business processes. Passionate about writing clean, functional code and leveraging data to improve operational efficiency.",
+  "summary": "Systems Developer specializing in C#/.NET and Epicor Kinetic ERP. I build the integrations, APIs, and business intelligence that cut waste and drive smarter operational decisions. Outside of work, I’m a family man who enjoys building custom tools to manage a busy household.",
   "skills": [{
       "category": "Epicor & Dev Tools",
       "items": ["C#", "Epicor Functions (EFx)", "Kinetic Application Studio", "BPM", "BAQ", "DMT", "REST API", "Postman", "OpenAPI/Swagger (NSwag)", "PowerShell", "Git", "Azure DevOps"]
@@ -69,7 +69,7 @@
     "personalGrowth": [
     {
       "category": "B.A. Safety Science",
-      "description": "Focus: Process Control & Improvement"
+      "description": "Process Control & Improvement"
     },
     {
       "category": "Python BootCamp (Udemy)",
@@ -77,7 +77,7 @@
     },
     {
       "category": "Tim Corey's Dev Forge",
-      "description": "C# Master Course, Web Dev Master Course, ASP.NET Core, SQL & DevOps"
+      "description": "C#, Web Development, ASP.NET Core, SQL, DevOps"
     },
     {
       "category": "Full-Stack BootCamp (Udemy)",
@@ -86,13 +86,25 @@
     ],
     "personalProjects": [
     {
-      "financeApp": "B.A. Occupational Health & Safety Focus: Compliance & Continuous Improvement"
+      "name": "Personal Finance Pipeline",
+      "description": "Engineered a full-stack data pipeline to ingest CSV financial records...",
+      "stack": ".NET (C#) • MySQL • PowerShell • Power BI",
+      "codeLink": "https://github.com/brentscripts/crystal-finance.git",
+      "demoLink": "http://127.0.0.1:5501/DEMO_URL"
     },
     {
-      "passwordManager": "Tim Corey's Dev Forge C# Master Course, Web Dev Master Course, Web API, Blazor, SQL & DevOps"
+      "name": "Password Manager",
+      "description": "Engineered a secure vault utilizing Fernet authenticated encryption to protect credentials with AES-128-CBC and automated integrity verification.",
+      "stack": "Python • Tkinter • cryptography (Fernet)",
+      "codeLink": "https://github.com/brentscripts/pw-mgr.git",
+      "demoLink": "http://127.0.0.1:5501/DEMO_URL"
     },
     {
-      "thisResume": "Professional Development (Udemy) Dr. Angela Yu's Python BootCamp (Expected Mar 2026) Dr. Angela Yu's Full-Stack BootCamp (Expected Dec 2026)"
+      "name": "Resume Builder",
+      "description": "Responsive and accessible resume builder using modern web standards.",
+      "stack": "HTML5 • CSS3 • JavaScript",
+      "codeLink": "https://github.com/brentscripts/brent-crystal-resume.git",
+      "demoLink": "http://127.0.0.1:5501/DEMO_URL"
     }
     ]
 }

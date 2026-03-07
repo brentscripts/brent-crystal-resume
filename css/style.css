@@ -317,14 +317,13 @@ li strong {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     gap: 5px;
-    font-size: var(--size-body);
+    font-size: var(--size-h3);
 }
 
 .edu-description {
     color: var(--text-muted, #555);
-    font-style: italic;
+    font-size: var(--size-body);
 }
-
 
 /* 8. PRINT OVERRIDES */
 @media print {
