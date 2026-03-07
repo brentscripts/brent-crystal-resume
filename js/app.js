@@ -2,7 +2,7 @@
     "use strict";
 
     app.resumeItems = [];
-
+    console.log("1. I am defining the function now.");
     app.HomePage = async function(){
         await loadResumeData();
         updateResume();
@@ -10,17 +10,18 @@
 
     async function loadResumeData(){
         const cachedData = sessionStorage.getItem('resume-data');
-        if(cachedData != null){
+        // If we have a cache, parse it; otherwise, fetch it.
+        if (cachedData) {
             app.resumeItems = JSON.parse(cachedData);
-        }else{
-            try {
-                const rawData = await fetch('resumeData.json');
-                const data = await rawData.json();
-                app.resumeItems = data;
-                sessionStorage.setItem('resume-data', JSON.stringify(data)); 
-            } catch (error) {
-                console.error('Error loading resume data:', error);
-            }       
+            return; 
+        }
+
+        try {
+            const response = await fetch('resumeData.json');
+            app.resumeItems = await response.json();
+            sessionStorage.setItem('resume-data', JSON.stringify(app.resumeItems));
+        } catch (error) {
+            console.error('Failed to load resume:', error);
         }
     }
 
@@ -30,6 +31,8 @@
 
         const summary = document.querySelector('.summary-text');
         summary.innerText = app.resumeItems.summary;
+
+        document.getElementById("year").textContent = new Date().getFullYear();
 
         createSkillsSection("skills-container");
         createExperienceSection("experience");
@@ -88,7 +91,7 @@
         const container = document.getElementById('education-container');
         container.innerHTML = data.map(edu => `
             <p>
-                <strong>${edu.category}</strong><br>
+                <span class="edu-category">${edu.category}</span><br>
                 <span class="edu-description">${edu.description}</span>
             </p>
         `).join('');
@@ -108,5 +111,16 @@
         `).join('');
     }
 
+    function init() {
+        if (window.app && typeof window.app.HomePage === 'function') {
+            window.app.HomePage();
+        }
+    }
+    // Defensive "Ready" Check
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init(); // Document is already ready
+    }
 
 })(window.app = window.app || {});

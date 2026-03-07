@@ -95,7 +95,7 @@
     {
       "name": "Password Manager",
       "description": "Engineered a secure vault utilizing Fernet authenticated encryption to protect credentials with AES-128-CBC and automated integrity verification.",
-      "stack": "Python • Tkinter • cryptography (Fernet)",
+      "stack": "Python • Tkinter • Cryptography (Fernet)",
       "codeLink": "https://github.com/brentscripts/pw-mgr.git",
       "demoLink": "http://127.0.0.1:5501/DEMO_URL"
     },

@@ -43,6 +43,7 @@ body {
     min-height: 11in; 
     height: auto;      
     margin: 0 auto;
+    margin-top: var(--gap-section);
     padding:  0.1in 0.3in; 
 }
 
@@ -286,16 +287,11 @@ li strong {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-bottom: 0.2rem;
     font-size: var(--size-body);
 }
 
-/* 7.1 PROJECTS */
 .project-title {
-    text-decoration: none;
-    color: #2d3436;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.3s ease;
+    font-size: var(--size-h3);
 }
 
 .project-title:hover {
@@ -317,12 +313,29 @@ li strong {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     gap: 5px;
-    font-size: var(--size-h3);
+}
+
+.edu-category {
+   font-size: var(--size-h3);
+   font-weight: bold;
 }
 
 .edu-description {
-    color: var(--text-muted, #555);
     font-size: var(--size-body);
+}
+
+/* Standard Footer Styling */
+.site-footer {
+  margin-top: var(--gap-section);
+  margin-bottom: var(--gap-section);
+  border-top: 1px solid #eaeaea;
+  text-align: center;
+  color: var(--text-light); 
+  font-size: 0.9rem;
+}
+
+.site-footer p {
+  margin: 0;
 }
 
 /* 8. PRINT OVERRIDES */
@@ -374,6 +387,10 @@ li strong {
     body {
         margin: 0;
         font-size: 10pt; 
+    }
+
+    .site-footer {
+        display: none;
     }
 }
 
