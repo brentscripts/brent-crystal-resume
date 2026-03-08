@@ -98,7 +98,6 @@
         container.innerHTML = data.map((edu, index) => `
             <div class="edu-item item-${index + 1}">
                 <span class="edu-category">${edu.category}</span><br>
-                <span class="edu-institution"><em>${edu.institution}</em></span><br>
                 <span class="edu-description">${edu.description}</span>
             </div>
         `).join('');
@@ -110,7 +109,7 @@
             <div class="project-item">
                 <strong>${project.name}</strong>
                 <span class="project-links">
-                    <a href="${project.codeLink}" style="text-decoration:none;">[Code]</a> 
+                    <a href="${project.codeLink}" aria-label="View source code for ${project.name}">[Code]</a> 
                 </span>
             </div>
             <p><em>${project.stack}</em></p>
@@ -132,12 +131,22 @@
         yearElement.textContent = new Date().getFullYear();
     }
 
-
     function init() {
         if (window.app && typeof window.app.HomePage === 'function') {
             window.app.HomePage();
         }
+
+        // Add a 500ms delay to ensure a smooth reveal
+        setTimeout(() => {
+            const loader = document.getElementById('loader');
+            if (loader) {
+                loader.classList.add('hidden');
+                // Optional: Fade in your content here if you have a wrapper
+                // document.getElementById('resume-grid').style.opacity = '1';
+            }
+        }, 500); 
     }
+
     // Defensive "Ready" Check
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);

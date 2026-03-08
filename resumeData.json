@@ -80,19 +80,19 @@
   ],
     "personalGrowth": [
     {
-      "category": "B.S. Safety Studies",
-      "institution": "Keene State College",
-      "description": "Process Control & Operational Improvement"
-    },
-    {
-      "category": "Software Development Curriculum",
+      "category": "Software Development Curriculum (Tim Corey’s Dev Forge | 9 Certs) ",
       "institution": "Tim Corey’s Dev Forge",
-      "description": "9 Certifications: C# Master Course, Web Dev Master Course, Web API From Start to Finish, Blazor From Start to Finish, Blazor Server From Start to Finish, SQL Database From Start to Finish, Git From Start to Finish, Database DevOps From Start to Finish, .NET Core AppSettings From Start to Finish"
+      "description": "C# Master Course • Web Development Master Course • Web API • Blazor • SQL • Database DevOps • Git • .NET AppSetting • Docker "
     },
     {
-      "category": "Full-Stack & Python Bootcamps",
+      "category": "Full-Stack & Python Bootcamps (Udemy | Expected 2026)",
       "institution": "Udemy",
-      "description": "In Progress: System Automation and Web Architecture (Expected 2026)"
+      "description": "Python • HTML • CSS •Javascript • Node • React • PostgreSQL"
+    },
+    {
+      "category": "B.S. Safety Studies (Keen State College)",
+      "institution": "Keene State College",
+      "description": "Safety Program Administration • Process Control • Operational Improvement"
     }
     ],
     "personalProjects": [
@@ -105,14 +105,14 @@
     },
     {
       "name": "Password Manager",
-      "description": "Engineered a secure vault utilizing Fernet authenticated encryption to protect credentials with AES-128-CBC and automated integrity verification.",
+      "description": "Developed a secure vault utilizing Fernet authenticated encryption to protect credentials with AES-128-CBC and automated integrity verification.",
       "stack": "Python • Tkinter • Cryptography (Fernet)",
       "codeLink": "https://github.com/brentscripts/pw-mgr.git",
       "demoLink": "http://127.0.0.1:5501/DEMO_URL"
     },
     {
-      "name": "Resume Builder",
-      "description": "Responsive and accessible resume builder using modern web standards.",
+      "name": "JSON-Driven Resume",
+      "description": "Built a dynamic resume using JavaScript to inject JSON data into reusable HTML components.",
       "stack": "HTML5 • CSS3 • JavaScript",
       "codeLink": "https://github.com/brentscripts/brent-crystal-resume.git",
       "demoLink": "http://127.0.0.1:5501/DEMO_URL"
