@@ -2,7 +2,6 @@
     "use strict";
 
     app.resumeItems = [];
-    console.log("1. I am defining the function now.");
     app.HomePage = async function(){
         await loadResumeData();
         updateResume();
@@ -26,19 +25,21 @@
     }
 
     function updateResume(){
+
+        if (!app.resumeItems || Object.keys(app.resumeItems).length === 0) return;
+
         const header = document.querySelector('.tagline');
         header.innerText = app.resumeItems.header.tagline;
 
         const summary = document.querySelector('.summary-text');
         summary.innerText = app.resumeItems.summary;
 
-        document.getElementById("year").textContent = new Date().getFullYear();
-
         createSkillsSection("skills-container");
         createExperienceSection("experience");
         renderCompactHistory(app.resumeItems.careerProgression);
         renderEducationData(app.resumeItems.personalGrowth);
         renderPersonalProjects(app.resumeItems.personalProjects);
+        setCopyrightYear();
     }
 
     function createSkillsSection(skill){
@@ -64,7 +65,12 @@
             <div class="experience-item">
                 <div class="exp-header">
                     <h3>${exp.title}</h3>
-                    <span class="date">${exp.date}</span>
+                    <span class="date">
+                    ${exp.endDate === "" 
+                        ? `<time datetime="${exp.startISO}">${exp.startDate}</time> – Present` 
+                        : `<time datetime="${exp.startISO}">${exp.startDate}</time> – <time datetime="${exp.endISO}">${exp.endDate}</time>`
+                    }
+                </span>
                 </div>
                 <ul>
                     ${exp.details.map(createExperienceItem).join('')}
@@ -77,10 +83,10 @@
     function renderCompactHistory(data) {
         const historyContainer = document.getElementById('career-progression');
         
-        // Wrap each in a span and give the 3rd one a special class
         const historyHtml = data.map((item, index) => 
             `<span class="history-chip item-${index + 1}">
-                <strong>${item.role}</strong><br><span class="date">${item.years}</span>
+                <strong>${item.role}</strong><br>
+                <span class="date"><time datetime="${item.startISO}">${item.startDate}</time> – <time datetime="${item.endISO}">${item.endDate}</time></span>
             </span>`
         ).join('');
 
@@ -89,11 +95,12 @@
 
     function renderEducationData(data) {
         const container = document.getElementById('education-container');
-        container.innerHTML = data.map(edu => `
-            <p>
+        container.innerHTML = data.map((edu, index) => `
+            <div class="edu-item item-${index + 1}">
                 <span class="edu-category">${edu.category}</span><br>
+                <span class="edu-institution"><em>${edu.institution}</em></span><br>
                 <span class="edu-description">${edu.description}</span>
-            </p>
+            </div>
         `).join('');
     }
 
@@ -103,13 +110,28 @@
             <div class="project-item">
                 <strong>${project.name}</strong>
                 <span class="project-links">
-                    <a href=${project.codeLink} style="text-decoration:none;">[Code]</a> 
+                    <a href="${project.codeLink}" style="text-decoration:none;">[Code]</a> 
                 </span>
             </div>
             <p><em>${project.stack}</em></p>
             <p>${project.description}</p>
         `).join('');
     }
+
+    function setCopyrightYear() {
+        const yearElement = document.getElementById("year");
+        
+        if (!yearElement) {
+            window.requestAnimationFrame(() => {
+                const retry = document.getElementById("year");
+                if (retry) retry.textContent = new Date().getFullYear();
+            });
+            return;
+        }
+        
+        yearElement.textContent = new Date().getFullYear();
+    }
+
 
     function init() {
         if (window.app && typeof window.app.HomePage === 'function') {

@@ -279,8 +279,12 @@ li strong {
 #career-progression {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     font-size: var(--size-body);
+}
+
+.career-date{
+    align-content: center;
 }
 
 .project-item{
@@ -315,6 +319,11 @@ li strong {
     gap: 5px;
 }
 
+/* Simplest way to span two rows */
+.item-2 { 
+    grid-row: span 2; 
+}
+
 .edu-category {
    font-size: var(--size-h3);
    font-weight: bold;
@@ -323,6 +332,10 @@ li strong {
 .edu-description {
     font-size: var(--size-body);
 }
+
+.edu-institution {
+    font-size: var(--size-body);
+}   
 
 /* Standard Footer Styling */
 .site-footer {
@@ -338,7 +351,6 @@ li strong {
   margin: 0;
 }
 
-/* 8. PRINT OVERRIDES */
 @media print {
     .sidebar {
         background-color: var(--sidebar-bg) !important;
