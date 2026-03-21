@@ -136,15 +136,7 @@
             window.app.HomePage();
         }
 
-        // Add a 500ms delay to ensure a smooth reveal
-        setTimeout(() => {
-            const loader = document.getElementById('loader');
-            if (loader) {
-                loader.classList.add('hidden');
-                // Optional: Fade in your content here if you have a wrapper
-                // document.getElementById('resume-grid').style.opacity = '1';
-            }
-        }, 500); 
+ 
     }
 
     // Defensive "Ready" Check
