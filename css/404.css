@@ -1,0 +1,159 @@
+:root {
+  --text-main: #1a202c;
+  --text-light: #4a5568;
+  --accent: #2b6cb0;
+  --border-color: #e2e8f0;
+  --line-height: 1.4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #e2e8f0;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-main);
+  line-height: var(--line-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+.container {
+  background: white;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 100%;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.not-found-image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 2rem;
+  display: block;
+}
+
+.error-wrapper {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.error-code {
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--accent);
+  opacity: 0.1;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: -1;
+}
+
+h2 {
+  font-size: 1.75rem;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+a {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #1e4d8b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(43, 108, 176, 0.2);
+}
+
+.btn-secondary {
+  background-color: var(--border-color);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background-color: #d5dce3;
+  border-color: var(--text-light);
+}
+
+.footer-note {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+.icon {
+  margin-right: 0.5rem;
+}
+
+.footer-link {
+  color: var(--accent);
+  padding: 0;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    padding: 2rem 1.5rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  a {
+    width: 100%;
+  }
+}
