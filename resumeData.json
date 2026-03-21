@@ -18,13 +18,16 @@
     },
     {
       "category": "Veteran",
-      "items": ["U.S. Army Infantry | 1994 - 1997"]
+      "items": ["U.S. Army Infantry"]
     }
   ],
   "experience": [
     {
       "title": "Business Systems Developer",  
-      "date": "Mar 2022 – Present",
+      "startDate": "Mar 2022",
+      "startISO": "2022-03",
+      "endDate": "",
+      "endISO": "",
       "details": [
         {
           "label": "Cost Optimization",
@@ -52,36 +55,44 @@
   "careerProgression": [
     { 
       "role": "Business Analyst | 4 yrs", 
-      "years": "Jan 2018 – Mar 2022", 
+      "startDate": "Jan 2018",
+      "startISO": "2018-01",
+      "endDate": "Mar 2022",
+      "endISO": "2022-03",
       "highlight": "VBA/Scheduling" 
     },
     { 
       "role": "Value Stream Manager | 4 yrs", 
-      "years": "Dec 2013 – Dec 2017", 
+      "startDate": "Dec 2013",
+      "startISO": "2013-12",
+      "endDate": "Dec 2017",
+      "endISO": "2017-12",
       "highlight": "Ops Management" 
     },
     { 
       "role": "Account Manager | 7 yrs", 
-      "years": "Dec 2006 – Dec 2013", 
+      "startDate": "Dec 2006",
+      "startISO": "2006-12",
+      "endDate": "Dec 2013",
+      "endISO": "2013-12",
       "highlight": "ERP Strategy" 
     }
   ],
     "personalGrowth": [
     {
-      "category": "B.A. Safety Science",
-      "description": "Process Control & Improvement"
+      "category": "Software Development Curriculum (Tim Corey’s Dev Forge | 9 Certs) ",
+      "institution": "Tim Corey’s Dev Forge",
+      "description": "C# Master Course • Web Development Master Course • Web API • Blazor • SQL • Database DevOps • Git • .NET AppSetting • Docker "
     },
     {
-      "category": "Python BootCamp (Udemy)",
-      "description": "Expected Mar 2026"
+      "category": "Full-Stack & Python Bootcamps (Udemy | Expected 2026)",
+      "institution": "Udemy",
+      "description": "Python • HTML • CSS •Javascript • Node • React • PostgreSQL"
     },
     {
-      "category": "Tim Corey's Dev Forge",
-      "description": "C#, Web Development, ASP.NET Core, SQL, DevOps"
-    },
-    {
-      "category": "Full-Stack BootCamp (Udemy)",
-      "description": "Expected Dec 2026"
+      "category": "B.S. Safety Studies (Keen State College)",
+      "institution": "Keene State College",
+      "description": "Safety Program Administration • Process Control • Operational Improvement"
     }
     ],
     "personalProjects": [
@@ -94,14 +105,14 @@
     },
     {
       "name": "Password Manager",
-      "description": "Engineered a secure vault utilizing Fernet authenticated encryption to protect credentials with AES-128-CBC and automated integrity verification.",
-      "stack": "Python • Tkinter • cryptography (Fernet)",
+      "description": "Developed a secure vault utilizing Fernet authenticated encryption to protect credentials with AES-128-CBC and automated integrity verification.",
+      "stack": "Python • Tkinter • Cryptography (Fernet)",
       "codeLink": "https://github.com/brentscripts/pw-mgr.git",
       "demoLink": "http://127.0.0.1:5501/DEMO_URL"
     },
     {
-      "name": "Resume Builder",
-      "description": "Responsive and accessible resume builder using modern web standards.",
+      "name": "JSON-Driven Resume",
+      "description": "Built a dynamic resume using JavaScript to inject JSON data into reusable HTML components.",
       "stack": "HTML5 • CSS3 • JavaScript",
       "codeLink": "https://github.com/brentscripts/brent-crystal-resume.git",
       "demoLink": "http://127.0.0.1:5501/DEMO_URL"

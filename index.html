@@ -1,118 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brent Crystal - Resume</title>    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Brent Crystal - Resume</title>  
+        <link rel="icon" href="images/favicon.ico">  
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
 
-<body class="resume-print">
-<div class="resume-container">
+    <body class="resume-print">
+        <article>
+            <div class="resume-container">
 
-    <!-- Header Section -->
-    <header class="personal-header">
-        <div class="header-content">
-            <img class="profile-pic" src="images/brent-headshot.jpg" alt="Brent Crystal">
-            <div class="header-text">
-                <h1>Brent Crystal</h1>
-                <p class="tagline">Business Systems Developer | Epicor Integration Specialist</p>
-                <div class="contact-flex">
-                    <span><i class="fa-solid fa-envelope"></i> brentrcrystal@gmail.com</span>
-                    <span><i class="fa-solid fa-location-dot"></i> Dover, NH</span>
-                    <span>
-                        <i class="fa-brands fa-linkedin"></i> 
-                        <a href="https://www.linkedin.com/in/brent-crystal" target="_blank">://linkedin.com</a>
-                    </span>
-                    <span>
-                        <i class="fa-brands fa-github"></i> 
-                        <a href="https://www.github.com/brentscripts" target="_blank">://github.com</a>
-                    </span>
+                <!-- Spinner shows while JS is loading -->
+                <div id="loader" class="loader-wrapper">
+                    <div class="spinner"></div>
+                </div>
+
+                <!-- Header Section -->
+                <header class="personal-header">
+                    <div class="header-content">
+                        <figure>
+                            <img class="profile-pic" src="images/brent-headshot.webp" alt="Brent Crystal">
+                        </figure>
+                        <div class="header-text">
+                            <h1>Brent Crystal</h1>
+                            <p class="tagline">Business Systems Developer | Epicor Integration Specialist</p>
+                            <div class="contact-flex">
+                                <span><i class="fa-solid fa-envelope"></i> brentrcrystal@gmail.com</span>
+                                <span><i class="fa-solid fa-location-dot"></i> Dover, NH</span>
+                                <span>
+                                    <i class="fa-brands fa-linkedin"></i> 
+                                    <a href="https://www.linkedin.com/in/brent-crystal" target="_blank">://linkedin.com</a>
+                                </span>
+                                <span>
+                                    <i class="fa-brands fa-github"></i> 
+                                    <a href="https://www.github.com/brentscripts" target="_blank">://github.com</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="two-column-layout">
+
+                    <!-- Left Column: Summary & Technical Skills -->
+                    <aside class="sidebar">
+
+                        <!-- Summary Section -->
+                        <section class="resume-section">
+                            <h2>Summary</h2>
+                            <p class="summary-text">Systems Developer with a core focus in C#/.NET and Epicor ERP environments. Experienced in building custom integrations, REST APIs, and SQL scripts to automate business processes. Passionate about writing clean, functional code and leveraging data to improve operational efficiency.</p>
+                        </section>
+
+                        <!-- Technical Skills Section -->
+                        <section class="resume-section" aria-labelledby="skills-title">
+                            <h2 id="skills-title">Technical Skills</h2>
+                            <div id="skills-container">
+                                <!--JS will inject Skills content here-->
+                                <p class="loading">Loading technical skills...</p>
+                                <noscript>Please enable JavaScript to view my technical skills.</noscript>
+                            </div>
+                        </section>
+                    </aside>
+
+                    <!-- Right Column: Professional Experience, Education, Personal Growth & Projects -->
+                    <main class="main-content">
+
+                        <!-- Professional Experience Section -->
+                        <section class="resume-section">
+                            <h2>Professional Experience</h2>
+                            <div class="exp-header">
+                                <p class="company">Turbocam International</p>
+                                <span class="date"><strong><time datetime="2006-12">Dec 2006</time> – Present (19 Years)</strong></span>
+                            </div>
+                            <div id="experience" class="experience-container">
+                            <!--JS will inject Skills content here-->
+                                <p class="loading">Loading professional experience...</p>
+                                <noscript>Please enable JavaScript to view my professional experience.</noscript>
+                            </div>
+                            
+                            <div>
+                                <p class="company">Career Progression</p>
+                                <div id="career-progression">
+                                    <!--JS will inject Skills content here-->
+                                    <p class="loading">Loading career progression...</p>
+                                    <noscript>Please enable JavaScript to view my career progression.</noscript>
+                                </div>
+                            </div>
+                        </section>
+                    
+                        <!-- Education Section -->
+                        <section class="resume-section">
+                            <h2>EDUCATION & PERSONAL GROWTH</h2>
+                            <div id="education-container">
+                                <!-- JS will inject items here -->
+                                <p class="loading">Loading education and personal growth...</p>
+                                <noscript>Please enable JavaScript to view my education and personal growth.</noscript>
+                            </div>
+                        </section>
+
+                        <!-- Projects Section -->
+                    <section class="resume-section">
+                            <h2>Personal Projects</h2>
+                            <div id="projects-container" class="project-entry">
+                                <!-- JS will inject items here -->
+                                <p class="loading">Loading personal projects...</p>
+                                <noscript>Please enable JavaScript to view my personal projects.</noscript>
+                            </div>
+                        </section>
+
+                    </main>
                 </div>
             </div>
-        </div>
-    </header>
+            <script src="js/app.js"></script>
+            <script>
+                app.HomePage();
+            </script>
 
-    <div class="two-column-layout">
-
-        <!-- Left Column: Summary & Technical Skills -->
-        <aside class="sidebar">
-
-            <!-- Summary Section -->
-            <section class="resume-section">
-                <h2>Summary</h2>
-                <p class="summary-text">Systems Developer with a core focus in C#/.NET and Epicor ERP environments. Experienced in building custom integrations, REST APIs, and SQL scripts to automate business processes. Passionate about writing clean, functional code and leveraging data to improve operational efficiency.</p>
-            </section>
-
-            <!-- Technical Skills Section -->
-            <section class="resume-section" aria-labelledby="skills-title">
-                <h2 id="skills-title">Technical Skills</h2>
-                <div id="skills-container">
-                    <!--JS will inject Skills content here-->
-                    <p class="loading">Loading technical skills...</p>
-                    <noscript>Please enable JavaScript to view my technical skills.</noscript>
-                </div>
-            </section>
-        </aside>
-
-        <!-- Right Column: Professional Experience, Education, Personal Growth & Projects -->
-        <main class="main-content">
-
-            <!-- Professional Experience Section -->
-            <section class="resume-section">
-                <h2>Professional Experience</h2>
-                <div class="exp-header">
-                    <p class="company">Turbocam International</p>
-                    <span class="date"><strong>2006 – Present (19 Years)</strong></span>
-                </div>
-                <div id="experience" class="experience-container">
-                <!--JS will inject Skills content here-->
-                    <p class="loading">Loading professional experience...</p>
-                    <noscript>Please enable JavaScript to view my professional experience.</noscript>
-                </div>
-                
-                <div>
-                    <p class="company">Career Progression</p>
-                    <div id="career-progression">
-                        <!--JS will inject Skills content here-->
-                        <p class="loading">Loading career progression...</p>
-                        <noscript>Please enable JavaScript to view my career progression.</noscript>
-                    </div>
-                </div>
-            </section>
-         
-            <!-- Education Section -->
-            <section class="resume-section">
-                <h2>EDUCATION & PERSONAL GROWTH</h2>
-                <div id="education-container">
-                    <!-- JS will inject items here -->
-                     <p class="loading">Loading education and personal growth...</p>
-                    <noscript>Please enable JavaScript to view my education and personal growth.</noscript>
-                </div>
-            </section>
-
-            <!-- Projects Section -->
-           <section class="resume-section">
-                <h2>Personal Projects</h2>
-                <div id="projects-container" class="project-entry">
-                    <!-- JS will inject items here -->
-                    <p class="loading">Loading personal projects...</p>
-                    <noscript>Please enable JavaScript to view my personal projects.</noscript>
-                </div>
-            </section>
-
-        </main>
-    </div>
-</div>
-<script src="js/app.js"></script>
-<script>
-    app.HomePage();
-</script>
-
-</body>
+            <footer class="site-footer">
+                <small>&copy; <span id="year"></span> Brent Crystal. Built with HTML, CSS, and JavaScript.</small>
+            </footer>
+        </article>
+    </body>
 </html>

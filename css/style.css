@@ -43,6 +43,7 @@ body {
     min-height: 11in; 
     height: auto;      
     margin: 0 auto;
+    margin-top: var(--gap-section);
     padding:  0.1in 0.3in; 
 }
 
@@ -278,24 +279,23 @@ li strong {
 #career-progression {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     font-size: var(--size-body);
+}
+
+.career-date{
+    align-content: center;
 }
 
 .project-item{
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-bottom: 0.2rem;
     font-size: var(--size-body);
 }
 
-/* 7.1 PROJECTS */
 .project-title {
-    text-decoration: none;
-    color: #2d3436;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.3s ease;
+    font-size: var(--size-h3);
 }
 
 .project-title:hover {
@@ -306,6 +306,7 @@ li strong {
     margin-left: 10px;
     color: #636e72;
     font-size: 1.1rem;
+    text-decoration: none;
 }
 
 .project-links a:hover {
@@ -313,19 +314,80 @@ li strong {
 }
 
 #education-container {
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    gap: 5px;
-    font-size: var(--size-h3);
+    gap: 5px; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Simplest way to span two rows */
+.item-2 { 
+    grid-row: span 2; 
+}
+
+.edu-category {
+   font-size: var(--size-h3);
+   font-weight: bold;
 }
 
 .edu-description {
-    color: var(--text-muted, #555);
     font-size: var(--size-body);
 }
 
-/* 8. PRINT OVERRIDES */
+.edu-institution {
+    font-size: var(--size-body);
+}   
+
+/* Standard Footer Styling */
+.site-footer {
+  margin-top: var(--gap-section);
+  margin-bottom: var(--gap-section);
+  border-top: 1px solid #eaeaea;
+  text-align: center;
+  color: var(--text-light); 
+  font-size: 0.9rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* This centers everything inside it */
+.loader-wrapper {
+    display: flex;
+    justify-content: center; /* Horizontal center */
+    align-items: center;     /* Vertical center */
+    position: fixed;         /* Stays in center even if you scroll */
+    top: 0;
+    left: 0;
+    width: 100vw;            /* Full screen width */
+    height: 100vh;           /* Full screen height */
+    background-color: var(--border-color); /* Match your resume background */
+    z-index: 9999;           /* Sits on top of everything */
+}
+
+/* This is just the circle */
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.hidden {
+    display: none !important;
+}
+
+
 @media print {
     .sidebar {
         background-color: var(--sidebar-bg) !important;
@@ -374,6 +436,10 @@ li strong {
     body {
         margin: 0;
         font-size: 10pt; 
+    }
+
+    .site-footer {
+        display: none;
     }
 }
 

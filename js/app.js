@@ -2,7 +2,6 @@
     "use strict";
 
     app.resumeItems = [];
-
     app.HomePage = async function(){
         await loadResumeData();
         updateResume();
@@ -10,21 +9,25 @@
 
     async function loadResumeData(){
         const cachedData = sessionStorage.getItem('resume-data');
-        if(cachedData != null){
+        // If we have a cache, parse it; otherwise, fetch it.
+        if (cachedData) {
             app.resumeItems = JSON.parse(cachedData);
-        }else{
-            try {
-                const rawData = await fetch('resumeData.json');
-                const data = await rawData.json();
-                app.resumeItems = data;
-                sessionStorage.setItem('resume-data', JSON.stringify(data)); 
-            } catch (error) {
-                console.error('Error loading resume data:', error);
-            }       
+            return; 
+        }
+
+        try {
+            const response = await fetch('resumeData.json');
+            app.resumeItems = await response.json();
+            sessionStorage.setItem('resume-data', JSON.stringify(app.resumeItems));
+        } catch (error) {
+            console.error('Failed to load resume:', error);
         }
     }
 
     function updateResume(){
+
+        if (!app.resumeItems || Object.keys(app.resumeItems).length === 0) return;
+
         const header = document.querySelector('.tagline');
         header.innerText = app.resumeItems.header.tagline;
 
@@ -36,6 +39,7 @@
         renderCompactHistory(app.resumeItems.careerProgression);
         renderEducationData(app.resumeItems.personalGrowth);
         renderPersonalProjects(app.resumeItems.personalProjects);
+        setCopyrightYear();
     }
 
     function createSkillsSection(skill){
@@ -61,7 +65,12 @@
             <div class="experience-item">
                 <div class="exp-header">
                     <h3>${exp.title}</h3>
-                    <span class="date">${exp.date}</span>
+                    <span class="date">
+                    ${exp.endDate === "" 
+                        ? `<time datetime="${exp.startISO}">${exp.startDate}</time> – Present` 
+                        : `<time datetime="${exp.startISO}">${exp.startDate}</time> – <time datetime="${exp.endISO}">${exp.endDate}</time>`
+                    }
+                </span>
                 </div>
                 <ul>
                     ${exp.details.map(createExperienceItem).join('')}
@@ -74,10 +83,10 @@
     function renderCompactHistory(data) {
         const historyContainer = document.getElementById('career-progression');
         
-        // Wrap each in a span and give the 3rd one a special class
         const historyHtml = data.map((item, index) => 
             `<span class="history-chip item-${index + 1}">
-                <strong>${item.role}</strong><br><span class="date">${item.years}</span>
+                <strong>${item.role}</strong><br>
+                <span class="date"><time datetime="${item.startISO}">${item.startDate}</time> – <time datetime="${item.endISO}">${item.endDate}</time></span>
             </span>`
         ).join('');
 
@@ -86,11 +95,11 @@
 
     function renderEducationData(data) {
         const container = document.getElementById('education-container');
-        container.innerHTML = data.map(edu => `
-            <p>
-                <strong>${edu.category}</strong><br>
+        container.innerHTML = data.map((edu, index) => `
+            <div class="edu-item item-${index + 1}">
+                <span class="edu-category">${edu.category}</span><br>
                 <span class="edu-description">${edu.description}</span>
-            </p>
+            </div>
         `).join('');
     }
 
@@ -100,7 +109,7 @@
             <div class="project-item">
                 <strong>${project.name}</strong>
                 <span class="project-links">
-                    <a href=${project.codeLink} style="text-decoration:none;">[Code]</a> 
+                    <a href="${project.codeLink}" aria-label="View source code for ${project.name}">[Code]</a> 
                 </span>
             </div>
             <p><em>${project.stack}</em></p>
@@ -108,5 +117,41 @@
         `).join('');
     }
 
+    function setCopyrightYear() {
+        const yearElement = document.getElementById("year");
+        
+        if (!yearElement) {
+            window.requestAnimationFrame(() => {
+                const retry = document.getElementById("year");
+                if (retry) retry.textContent = new Date().getFullYear();
+            });
+            return;
+        }
+        
+        yearElement.textContent = new Date().getFullYear();
+    }
+
+    function init() {
+        if (window.app && typeof window.app.HomePage === 'function') {
+            window.app.HomePage();
+        }
+
+        // Add a 500ms delay to ensure a smooth reveal
+        setTimeout(() => {
+            const loader = document.getElementById('loader');
+            if (loader) {
+                loader.classList.add('hidden');
+                // Optional: Fade in your content here if you have a wrapper
+                // document.getElementById('resume-grid').style.opacity = '1';
+            }
+        }, 500); 
+    }
+
+    // Defensive "Ready" Check
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init(); // Document is already ready
+    }
 
 })(window.app = window.app || {});
