@@ -1,24 +1,24 @@
-/* 1. VARIABLES & RESET */
 :root {
     --text-main: #1a202c;
     --text-light: #4a5568;
     --accent: #2b6cb0;          
     --sidebar-bg: #F5FBFF;     
     --border-color: #e2e8f0;
-    
-    /* Font sizes for readability */
+    --pill-bg: #edf2f7;
+    --font-mono: 'IBM Plex Mono', monospace;
     --size-h1: 22pt;
     --size-h2: 11pt;
     --size-h3: 10pt;
     --size-body: 9.5pt;
     --size-small: 8.5pt;
-
-    /* Spacing variables for consistent rhythm */
-    --small-gap: 0.125rem;   /* For tight spacing like between bullets */
-    --medium-gap: 0.250rem;  /* For spacing between sections or groups */     
-    --gap-section: .5rem;    /* Space between main sections */
-    --gap-item: 0.6rem;       /* Space between list items or jobs */
-    --line-height: 1.4;       /* Professional standard for readability */
+    --small-gap: 0.125rem;
+    --medium-gap: 0.250rem;     
+    --gap-section: .5rem;
+    --gap-item: 0.6rem;
+    --line-height: 1.4;
+    --radius-box: 8px;
+    --radius-pill: 999px;
+    --accent-glow: rgba(43, 108, 176, 0.4);
 }
 
 * {
@@ -36,7 +36,6 @@ body {
     print-color-adjust: exact;
 }
 
-/* 2. PAGE CONTAINER */
 .resume-container {
     background: white;
     width: 8.5in;
@@ -47,7 +46,6 @@ body {
     padding:  0.1in 0.3in; 
 }
 
-/* 3. REFACTORED HEADER */
 .personal-header {
     border-bottom: 3px solid var(--accent);
     padding-bottom: .5rem;
@@ -65,16 +63,13 @@ body {
     height: 85px;
     border-radius: 50%; 
     object-fit: cover;
-    /* THE GLOW EFFECT */
-    border: 2px solid white; /* A crisp inner ring to make the glow pop */
-    box-shadow: 0 0 15px rgba(43, 108, 176, 0.4); /* Uses a transparent version of your --accent blue */
-    
-    /* Ensuring the glow doesn't get clipped */
+    border: 2px solid white;
+    box-shadow: 0 0 15px var(--accent-glow);
     margin: 5px; 
 }
 
 .header-text h1 {
-    font-size: 26pt; /* Prominent name */
+    font-size: 26pt;
     color: var(--text-main);
     letter-spacing: -0.03em;
     line-height: 1;
@@ -89,7 +84,6 @@ body {
     letter-spacing: 0.05em;
 }
 
-/* Horizontal Contact Bar */
 .contact-flex {
     display: flex;
     flex-wrap: wrap;
@@ -109,15 +103,12 @@ body {
     font-size: 9pt;
 }
 
-
-/* 4. LAYOUT */
 .two-column-layout {
     display: grid;
     grid-template-columns: 2.3in 1fr;
     gap: 0.4in;
 }
 
-/* 5. TYPOGRAPHY & HIERARCHY */
 h2 {
     font-size: var(--size-h2);
     text-transform: uppercase;
@@ -138,7 +129,6 @@ p, li {
     font-size: var(--size-body);
 }
 
-/* 6. SIDEBAR SPECIFICS */
 .summary-text {
     font-size: 12pt !important;
     font-weight: 500;         
@@ -150,7 +140,7 @@ p, li {
 .sidebar {
     background-color: var(--sidebar-bg); 
     padding: 1rem;
-    border-radius: 8px; 
+    border-radius: var(--radius-box); 
     height: fit-content;
     border-right: 1px solid var(--border-color); 
 }
@@ -178,7 +168,6 @@ p, li {
     margin-bottom: 0.2rem;
 }
 
-/* 7. EXPERIENCE & BULLETS */
 .experience-item {
     margin-bottom: var(--gap-section);
 }
@@ -198,12 +187,12 @@ p, li {
 .date {
     font-size: var(--size-small);
     color: var(--text-light);
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: var(--font-mono);
 }
 
 ul {
     padding-left: 1.1rem;
-    list-style-type: square; /* Professional touch */
+    list-style-type: square;
 }
 
 li {
@@ -211,7 +200,7 @@ li {
 }
 
 li strong {
-    color: #000;
+    color: var(--text-main);
 }
 
 .skill-pills ul {
@@ -224,11 +213,11 @@ li strong {
 }
 
 .pill {
-    background: #edf2f7; /* Soft gray */
+    background: var(--pill-bg);
     color: var(--accent);
     font-size: var(--size-small);
     padding: 2px 10px;
-    border-radius: 999px; /* The "Pill" shape */
+    border-radius: var(--radius-pill);
     border: 1px solid var(--border-color);
     font-weight: 500;
     transition: all 0.2s ease;
@@ -242,7 +231,6 @@ li strong {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* New specific rules for single-company tenure */
 .company-group {
     margin-bottom: var(--gap-section);
 }
@@ -262,14 +250,14 @@ li strong {
 
 .row-header {
     display: flex;
-    justify-content: space-between; /* Pushes category left, date right */
-    align-items: baseline;        /* Keeps text aligned at the bottom */
+    justify-content: space-between; 
+    align-items: baseline;        
 }
 
 .details {
-    margin-top: 0px; /* Adds a little space under the header row */
+    margin-top: 0px; 
     display: block; 
-    font-size: var(--size-body);/* Ensures it stays on its own line */
+    font-size: var(--size-body);
 }
 
 .exp-label{
@@ -299,30 +287,25 @@ li strong {
 }
 
 .project-title:hover {
-    border-bottom: 2px solid #0984e3; /* A professional blue */
+    border-bottom: 2px solid var(--accent);
 }
 
 .project-links a {
     margin-left: 10px;
-    color: #636e72;
+    color: var(--text-light);
     font-size: 1.1rem;
     text-decoration: none;
 }
 
 .project-links a:hover {
-    color: #0984e3;
+    color: var(--accent);
 }
 
 #education-container {
-    /* display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 5px; */
     display: flex;
     flex-wrap: wrap;
 }
 
-/* Simplest way to span two rows */
 .item-2 { 
     grid-row: span 2; 
 }
@@ -340,7 +323,6 @@ li strong {
     font-size: var(--size-body);
 }   
 
-/* Standard Footer Styling */
 .site-footer {
   margin-top: var(--gap-section);
   margin-bottom: var(--gap-section);
@@ -367,17 +349,16 @@ li strong {
     
     html, body {
         height: 100%;
-        overflow: hidden; /* Stops the "ghost" second page */
+        overflow: hidden;
     }
 
     .resume-container {
-        padding: 0.3in 0.4in; /* Reclaims almost 0.5 inches of space */
+        padding: 0.3in 0.4in;
         box-shadow: none;
         width: 100%;
         height: 100%;
     }
 
-    /* Force the header and columns to stay together */
     .personal-header, .two-column-layout {
         break-inside: avoid;
     }
@@ -389,16 +370,15 @@ li strong {
         padding: 1px 6px;
     }
 
-    /* Remove colors/shadows that might look muddy when printed */
     .project-links a {
         color: black !important;
         text-decoration: underline;
     }
-    /* Ensure no page breaks happen in the middle of a project */
+
     .project-entry, .education-item {
         break-inside: avoid;
     }
-    /* Tighten up the margins for the physical page */
+    
     body {
         margin: 0;
         font-size: 10pt; 
