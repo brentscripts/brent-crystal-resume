@@ -90,7 +90,7 @@
       "description": "Python • HTML • CSS •Javascript • Node • React • PostgreSQL"
     },
     {
-      "category": "B.S. Safety Studies (Keen State College)",
+      "category": "B.S. Safety Studies (Keene State College)",
       "institution": "Keene State College",
       "description": "Safety Program Administration • Process Control • Operational Improvement"
     }
@@ -98,7 +98,7 @@
     "personalProjects": [
     {
       "name": "Personal Finance Pipeline",
-      "description": "Engineered a full-stack data pipeline to ingest CSV financial recordsg.",
+      "description": "Engineered a full-stack data pipeline to ingest CSV financial records.",
       "stack": ".NET (C#) • MySQL • PowerShell • Power BI",
       "codeLink": "https://github.com/brentscripts/crystal-finance.git",
       "demoLink": "http://127.0.0.1:5501/DEMO_URL"
