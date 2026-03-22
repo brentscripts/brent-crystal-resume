@@ -10,7 +10,7 @@ Feel free to fork and customize for your own resume!
 - **SEO Optimized** - Meta tags, Open Graph, Schema.org structured data (JSON-LD)
 - **Responsive Design** - Print-optimized layout with mobile support
 - **Security-Hardened** - Strict Content Security Policy (CSP) with no inline code
-- **Accessible** - WCAG 2.1 compliant with semantic HTML and ARIA labels
+- **Accessible** - Leverages semantic HTML and strategic ARIA patterns
 - **Custom 404 Page** - Branded error page with navigation
 - **Print-Friendly** - Optimized for PDF export
 
@@ -18,7 +18,7 @@ Feel free to fork and customize for your own resume!
 
 - **Frontend**: HTML5, CSS3, Vanilla JavaScript (ES6+)
 - **Styling**: CSS Custom Properties (Variables) for maintainable theming
-- **Icons**: Font Awesome 6.0
+- **Icons**: Font Awesome (CDN)
 - **Fonts**: Google Fonts (Inter)
 - **Hosting**: GitHub Pages (static)
 - **Data Format**: JSON
@@ -47,23 +47,21 @@ Feel free to fork and customize for your own resume!
    cd brent-crystal-resume
    ```
 
-2. **Open `index.html` with Live Server** in VS Code (or your preferred local server)
+2. **Open `index.html` with Live Server** in VS Code
 
 3. **Edit your resume:**
-   Update [resumeData.json](resumeData.json) with your content
+   - Update [resumeData.json](resumeData.json) with your content
+   - Modify [js/app.js](js/app.js) to refactor rendering functions that inject your JSON content into the HTML
 
-### Styling
-
-CSS uses a variable-based system for easy theming. Customizable variables in [css/style.css](css/style.css):
-
-```css
-:root {
-  --accent: #2b6cb0; /* Primary brand color */
-  --text-main: #1a202c; /* Main text color */
-  --sidebar-bg: #f5fbff; /* Sidebar background */
-  /* ...more variables */
-}
-```
+4. **Customize styling** (optional):
+   Edit CSS variables in [css/style.css](css/style.css):
+   ```css
+   :root {
+     --accent: #2b6cb0; /* Primary brand color */
+     --text-main: #1a202c; /* Main text color */
+     --sidebar-bg: #f5fbff; /* Sidebar background */
+   }
+   ```
 
 ## 🔒 Security
 
@@ -74,30 +72,17 @@ Content Security Policy (CSP) enforced via meta tag:
 - External styles: Google Fonts, Font Awesome CDN
 - Form submissions and frame embedding disabled
 
-## 📊 Performance & Quality
+## 📊 Optimizations
 
-This resume is optimized for:
+Built with performance, accessibility, and security in mind:
 
-- ✅ Performance (lazy loading, WebP images, deferred scripts)
-- ✅ Accessibility (WCAG 2.1 compliant, semantic HTML, ARIA labels)
-- ✅ Security (Strict CSP, no inline code, secure headers)
-- ✅ SEO (structured data, meta tags, responsive design)
-
-### Key Optimizations
-
-- Deferred script loading (`defer` attribute on schema.js)
-- Lazy loading on 404 image
-- WebP image format for faster loading
-- CSS variables for maintainable theming
-- Gzip compression (GitHub Pages)
+- Lazy loading on images
+- Deferred script loading
+- WebP image format
 - External CSS & JS (no inline code for CSP compliance)
-- Font preconnection for reduced TTFB
 - sessionStorage caching for resume data
+- Gzip compression (GitHub Pages)
 
 ## 📱 Browser Support
 
 Works on all modern browsers (Chrome, Firefox, Safari, Edge)
-
-## 🔄 Caching
-
-Resume data is cached in `sessionStorage` after first load for better performance.
